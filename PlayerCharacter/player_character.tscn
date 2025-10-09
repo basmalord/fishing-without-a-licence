@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs837suu5yuex"]
+
+[ext_resource type="Script" uid="uid://c41e3m23ifaa4" path="res://PlayerCharacter/player_character_script.gd" id="1_jnfdi"]
+[ext_resource type="SpriteFrames" uid="uid://bihvdv463phr" path="res://PlayerCharacter/Animation_Sprite_Frames/player_character_sprite_frames.tres" id="2_iqp7p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jijpc"]
+
+[node name="PlayerCharacter" type="CharacterBody2D"]
+collision_mask = 6
+platform_floor_layers = 4294967040
+script = ExtResource("1_jnfdi")
+
+[node name="PlayerAnimatedSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_iqp7p")
+animation = &"MoveSideways"
+autoplay = "Idle"
+
+[node name="PlayerBox" type="CollisionShape2D" parent="."]
+position = Vector2(5, -1)
+scale = Vector2(2.30952, 2.30952)
+shape = SubResource("CapsuleShape2D_jijpc")
+
+[node name="PlayerCamera" type="Camera2D" parent="."]

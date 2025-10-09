@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bolwi253goxct"]
+
+[ext_resource type="Script" uid="uid://bucvtquyciroy" path="res://NPCs/Base/npc_body.gd" id="1_dxkpe"]
+
+[node name="NPCBody" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_dxkpe")
+
+[node name="NPCBox" type="CollisionShape2D" parent="." groups=["CollisionBoxes"]]
+
+[node name="NPCAnimatedSprite" type="AnimatedSprite2D" parent="." groups=["AnimationSprites"]]

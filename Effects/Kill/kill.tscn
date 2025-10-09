@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bddn755htwgg3"]
+
+[ext_resource type="Script" uid="uid://yxqqo35d8jvl" path="res://Effects/Kill/kill.gd" id="1_0mubs"]
+
+[node name="Kill" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_0mubs")
+metadata/_custom_type_script = "uid://bxiaat6tcyban"

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn2oxfwoekdn"]
+
+[ext_resource type="Script" uid="uid://c5sn5pur5mwh5" path="res://NPCs/Enemies/base/enemy.gd" id="1_crwvx"]
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 6
+script = ExtResource("1_crwvx")
+npc_type = "Enemy"
+metadata/_custom_type_script = "uid://bucvtquyciroy"
+
+[node name="NPCBox" type="CollisionShape2D" parent="." groups=["CollisionBoxes"]]
+
+[node name="NPCAnimatedSprite" type="AnimatedSprite2D" parent="." groups=["AnimationSprites"]]

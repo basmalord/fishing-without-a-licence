@@ -1,0 +1,97 @@
+[gd_resource type="SpriteFrames" load_steps=19 format=3 uid="uid://bihvdv463phr"]
+
+[ext_resource type="Texture2D" uid="uid://dbxuehkxkxywu" path="res://PlayerCharacter/Animation_Textures/Idle/frame0006.png" id="1_a3uvs"]
+[ext_resource type="Texture2D" uid="uid://7kcj4e0i2btl" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0000.png" id="2_3snqc"]
+[ext_resource type="Texture2D" uid="uid://vgsdcthjy6ir" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0001.png" id="3_ghmnn"]
+[ext_resource type="Texture2D" uid="uid://b4jlpptyebd4r" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0002.png" id="4_rihh3"]
+[ext_resource type="Texture2D" uid="uid://drpwym1uwy4ii" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0003.png" id="5_fwkmo"]
+[ext_resource type="Texture2D" uid="uid://dic0vn2awcjp5" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0004.png" id="6_br214"]
+[ext_resource type="Texture2D" uid="uid://bmwxocswobq13" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0005.png" id="7_xh5ey"]
+[ext_resource type="Texture2D" uid="uid://dn5rgn465bs42" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0006.png" id="8_hsss6"]
+[ext_resource type="Texture2D" uid="uid://ciiuqvbrbbh0u" path="res://PlayerCharacter/Animation_Textures/MoveSideways/frame0000.png" id="9_hq8ic"]
+[ext_resource type="Texture2D" uid="uid://by3j05afwwja8" path="res://PlayerCharacter/Animation_Textures/MoveSideways/frame0001.png" id="10_frqeu"]
+[ext_resource type="Texture2D" uid="uid://bxav33np2d1q6" path="res://PlayerCharacter/Animation_Textures/MoveSideways/frame0002.png" id="11_3uswh"]
+[ext_resource type="Texture2D" uid="uid://2io15rjm7532" path="res://PlayerCharacter/Animation_Textures/MoveTowardsCamera/frame0000.png" id="12_3jmy8"]
+[ext_resource type="Texture2D" uid="uid://c8fr3tw5nsa33" path="res://PlayerCharacter/Animation_Textures/MoveTowardsCamera/frame0001.png" id="13_72t0g"]
+[ext_resource type="Texture2D" uid="uid://cgdf4a1fil08x" path="res://PlayerCharacter/Animation_Textures/MoveTowardsCamera/frame0002.png" id="14_82o87"]
+[ext_resource type="Texture2D" uid="uid://bsbpwgwmqxp1t" path="res://PlayerCharacter/Animation_Textures/MoveTowardsCamera/frame0003.png" id="15_p407l"]
+[ext_resource type="Texture2D" uid="uid://c1h8tbtuv26nu" path="res://PlayerCharacter/Animation_Textures/MoveTowardsCamera/frame0004.png" id="16_frrhn"]
+[ext_resource type="Texture2D" uid="uid://w0vjieugg5rh" path="res://PlayerCharacter/Animation_Textures/MoveTowardsCamera/frame0005.png" id="17_krbjj"]
+[ext_resource type="Texture2D" uid="uid://b3tl0lu8nr8ff" path="res://PlayerCharacter/Animation_Textures/MoveTowardsCamera/frame0006.png" id="18_8la53"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_a3uvs")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3snqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ghmnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rihh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fwkmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_br214")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xh5ey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hsss6")
+}],
+"loop": true,
+"name": &"MoveAwayFromCamera",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_hq8ic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_frqeu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3uswh")
+}],
+"loop": true,
+"name": &"MoveSideways",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_3jmy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_72t0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_82o87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_p407l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_frrhn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_krbjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_8la53")
+}],
+"loop": true,
+"name": &"MoveTowardCamera",
+"speed": 16.0
+}]
