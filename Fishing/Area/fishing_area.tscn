@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://2n2jitceoykg"]
+
+[ext_resource type="Script" uid="uid://dpuedp0kfkiy5" path="res://Fishing/Area/fishing_area.gd" id="1_1inso"]
+
+[node name="FishingArea" type="Area2D"]
+script = ExtResource("1_1inso")
+
+[connection signal="body_entered" from="." to="." method="_on_player_entered"]
+[connection signal="body_exited" from="." to="." method="_on_player_exited"]

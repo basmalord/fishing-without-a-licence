@@ -1,26 +1,113 @@
-[gd_resource type="SpriteFrames" load_steps=19 format=3 uid="uid://bihvdv463phr"]
+[gd_resource type="SpriteFrames" load_steps=37 format=3 uid="uid://bihvdv463phr"]
 
 [ext_resource type="Texture2D" uid="uid://dbxuehkxkxywu" path="res://PlayerCharacter/Animation_Textures/Idle/frame0006.png" id="1_a3uvs"]
+[ext_resource type="Texture2D" uid="uid://cxed6q5qnxmvl" path="res://PlayerCharacter/Animation_Textures/Fishing/Sideways/frame0000.png" id="1_mllye"]
 [ext_resource type="Texture2D" uid="uid://7kcj4e0i2btl" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0000.png" id="2_3snqc"]
+[ext_resource type="Texture2D" uid="uid://bfwnsqnviv6vx" path="res://PlayerCharacter/Animation_Textures/Fishing/Sideways/frame0001.png" id="2_5plkd"]
+[ext_resource type="Texture2D" uid="uid://djapc25ean52w" path="res://PlayerCharacter/Animation_Textures/Fishing/Sideways/frame0002.png" id="3_52w0n"]
 [ext_resource type="Texture2D" uid="uid://vgsdcthjy6ir" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0001.png" id="3_ghmnn"]
+[ext_resource type="Texture2D" uid="uid://bto72ewu54b7p" path="res://PlayerCharacter/Animation_Textures/Fishing/Sideways/frame0003.png" id="4_pjm8y"]
 [ext_resource type="Texture2D" uid="uid://b4jlpptyebd4r" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0002.png" id="4_rihh3"]
 [ext_resource type="Texture2D" uid="uid://drpwym1uwy4ii" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0003.png" id="5_fwkmo"]
+[ext_resource type="Texture2D" uid="uid://d10p7b1cuadph" path="res://PlayerCharacter/Animation_Textures/Fishing/Sideways/frame0004.png" id="5_rwhqp"]
+[ext_resource type="Texture2D" uid="uid://dll5up6fwxovg" path="res://PlayerCharacter/Animation_Textures/Fishing/Sideways/frame0005.png" id="6_6a8gc"]
 [ext_resource type="Texture2D" uid="uid://dic0vn2awcjp5" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0004.png" id="6_br214"]
+[ext_resource type="Texture2D" uid="uid://cyqfsb4wqfevn" path="res://PlayerCharacter/Animation_Textures/Fishing/Sideways/frame0006.png" id="7_lasow"]
 [ext_resource type="Texture2D" uid="uid://bmwxocswobq13" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0005.png" id="7_xh5ey"]
+[ext_resource type="Texture2D" uid="uid://dsnheaykxnl7v" path="res://PlayerCharacter/Animation_Textures/Fishing/Sideways/frame0007.png" id="8_5hb3s"]
 [ext_resource type="Texture2D" uid="uid://dn5rgn465bs42" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0006.png" id="8_hsss6"]
 [ext_resource type="Texture2D" uid="uid://ciiuqvbrbbh0u" path="res://PlayerCharacter/Animation_Textures/MoveSideways/frame0000.png" id="9_hq8ic"]
+[ext_resource type="Texture2D" uid="uid://ctjuy2ku6j73r" path="res://PlayerCharacter/Animation_Textures/Fishing/Sideways/frame0008.png" id="9_o7qhp"]
+[ext_resource type="Texture2D" uid="uid://p0xaioxd1rsr" path="res://PlayerCharacter/Animation_Textures/Fishing/Up/frame0000.png" id="10_8wuey"]
 [ext_resource type="Texture2D" uid="uid://by3j05afwwja8" path="res://PlayerCharacter/Animation_Textures/MoveSideways/frame0001.png" id="10_frqeu"]
 [ext_resource type="Texture2D" uid="uid://bxav33np2d1q6" path="res://PlayerCharacter/Animation_Textures/MoveSideways/frame0002.png" id="11_3uswh"]
+[ext_resource type="Texture2D" uid="uid://cj5ry1fdf51fs" path="res://PlayerCharacter/Animation_Textures/Fishing/Up/frame0001.png" id="11_cy50h"]
 [ext_resource type="Texture2D" uid="uid://2io15rjm7532" path="res://PlayerCharacter/Animation_Textures/MoveTowardsCamera/frame0000.png" id="12_3jmy8"]
+[ext_resource type="Texture2D" uid="uid://bq2v1yrypcw48" path="res://PlayerCharacter/Animation_Textures/Fishing/Up/frame0002.png" id="12_5ro81"]
 [ext_resource type="Texture2D" uid="uid://c8fr3tw5nsa33" path="res://PlayerCharacter/Animation_Textures/MoveTowardsCamera/frame0001.png" id="13_72t0g"]
+[ext_resource type="Texture2D" uid="uid://nkcmv7bs8s2l" path="res://PlayerCharacter/Animation_Textures/Fishing/Up/frame0003.png" id="13_vqenm"]
 [ext_resource type="Texture2D" uid="uid://cgdf4a1fil08x" path="res://PlayerCharacter/Animation_Textures/MoveTowardsCamera/frame0002.png" id="14_82o87"]
+[ext_resource type="Texture2D" uid="uid://kkdthfvyukm1" path="res://PlayerCharacter/Animation_Textures/Fishing/Up/frame0004.png" id="14_fg5ur"]
 [ext_resource type="Texture2D" uid="uid://bsbpwgwmqxp1t" path="res://PlayerCharacter/Animation_Textures/MoveTowardsCamera/frame0003.png" id="15_p407l"]
+[ext_resource type="Texture2D" uid="uid://3cxx0o0eb5gd" path="res://PlayerCharacter/Animation_Textures/Fishing/Up/frame0005.png" id="15_qok6g"]
 [ext_resource type="Texture2D" uid="uid://c1h8tbtuv26nu" path="res://PlayerCharacter/Animation_Textures/MoveTowardsCamera/frame0004.png" id="16_frrhn"]
+[ext_resource type="Texture2D" uid="uid://cbtq42bbkg5nc" path="res://PlayerCharacter/Animation_Textures/Fishing/Up/frame0006.png" id="16_kud2a"]
 [ext_resource type="Texture2D" uid="uid://w0vjieugg5rh" path="res://PlayerCharacter/Animation_Textures/MoveTowardsCamera/frame0005.png" id="17_krbjj"]
+[ext_resource type="Texture2D" uid="uid://bopcvsgt36qsa" path="res://PlayerCharacter/Animation_Textures/Fishing/Up/frame0007.png" id="17_qnmwl"]
+[ext_resource type="Texture2D" uid="uid://bqf23wocvsu5s" path="res://PlayerCharacter/Animation_Textures/Fishing/Up/frame0008.png" id="18_1q7pe"]
 [ext_resource type="Texture2D" uid="uid://b3tl0lu8nr8ff" path="res://PlayerCharacter/Animation_Textures/MoveTowardsCamera/frame0006.png" id="18_8la53"]
 
 [resource]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"FishingDown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mllye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5plkd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_52w0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pjm8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rwhqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6a8gc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lasow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5hb3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_o7qhp")
+}],
+"loop": true,
+"name": &"FishingSideways",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_8wuey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cy50h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5ro81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vqenm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fg5ur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_qok6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_kud2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_qnmwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1q7pe")
+}],
+"loop": true,
+"name": &"FishingUp",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_a3uvs")

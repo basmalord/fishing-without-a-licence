@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b80huqnj56on4"]
+[gd_scene load_steps=7 format=3 uid="uid://b80huqnj56on4"]
 
 [ext_resource type="Texture2D" uid="uid://dfom3jtobuf3x" path="res://Environment/Textures/big_map.jpg" id="1_jda1s"]
 [ext_resource type="Script" uid="uid://c15wev30rr5g6" path="res://Test/test.gd" id="1_su4bj"]
@@ -8,12 +8,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hxhys"]
 size = Vector2(170, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_su4bj"]
-size = Vector2(20, 54.8648)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbqg2"]
-size = Vector2(20, 64)
 
 [node name="test" type="Node2D"]
 script = ExtResource("1_su4bj")
@@ -41,29 +35,10 @@ text = "Descale
 
 [node name="FishingArea" parent="." instance=ExtResource("6_wbqg2")]
 position = Vector2(-230, -105)
-direction_of_water = "Up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea"]
 position = Vector2(76, -12)
 scale = Vector2(1.04457, -1.03159)
 shape = SubResource("RectangleShape2D_hxhys")
-
-[node name="FishingArea2" parent="." instance=ExtResource("6_wbqg2")]
-position = Vector2(-11, -187)
-direction_of_water = "Left"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea2"]
-position = Vector2(-13, 3)
-rotation = -3.14159
-scale = Vector2(1.28408, -1.22118)
-shape = SubResource("RectangleShape2D_su4bj")
-
-[node name="FishingArea3" parent="." instance=ExtResource("6_wbqg2")]
-position = Vector2(-272, -178)
-direction_of_water = "Right"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea3"]
-position = Vector2(12, 1)
-shape = SubResource("RectangleShape2D_wbqg2")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
