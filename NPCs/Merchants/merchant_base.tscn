@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://dn065u800j1c0"]
+
+[ext_resource type="PackedScene" uid="uid://bolwi253goxct" path="res://NPCs/Base/npc_body.tscn" id="1_quuy1"]
+[ext_resource type="Script" uid="uid://h25gif500xjx" path="res://NPCs/Merchants/merchant_base.gd" id="2_amyuw"]
+[ext_resource type="SpriteFrames" uid="uid://cv4r2agfefima" path="res://NPCs/Merchants/Animation Textures/merchant_sprite_frames.tres" id="3_ibbyf"]
+[ext_resource type="Texture2D" uid="uid://b0a631njlibxn" path="res://Fishing/Textures/Items/Rod2.png" id="4_ibbyf"]
+[ext_resource type="PackedScene" uid="uid://d3yu5apurveji" path="res://NPCs/Merchants/merchant_cost_ui.tscn" id="5_bjung"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_amyuw"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"Purple Merchant",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Red Merchant",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Yellow Merchant",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_amyuw"]
+
+[node name="MerchantBody" instance=ExtResource("1_quuy1")]
+collision_layer = 4
+script = ExtResource("2_amyuw")
+rod_type = ""
+cost = {
+"Blue Fish": 0,
+"Gold Fish": 0,
+"Purple Fish": 0,
+"Red Fish": 0
+}
+sprite_frames = ExtResource("3_ibbyf")
+
+[node name="NPCAnimatedSprite" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_amyuw")
+animation = &"Purple Merchant"
+
+[node name="MerchantRodSprite" type="Sprite2D" parent="." index="2"]
+texture = ExtResource("4_ibbyf")
+offset = Vector2(0, -100)
+
+[node name="MerchantArea" type="Area2D" parent="." index="3"]
+collision_layer = 64
+
+[node name="MerchantBox" type="CollisionShape2D" parent="MerchantArea" index="0"]
+scale = Vector2(15, 15)
+shape = SubResource("CircleShape2D_amyuw")
+
+[node name="MerchantCostUI" parent="." index="4" instance=ExtResource("5_bjung")]
+offset_left = -140.0
+offset_top = 80.0
+offset_right = -140.0
+offset_bottom = 80.0

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bevs6b8rux323"]
+
+[ext_resource type="Script" uid="uid://b7x8mdqo6a8yh" path="res://Admin/fish_counter.gd" id="1_1w77h"]
+
+[node name="FishCounter" type="Node"]
+script = ExtResource("1_1w77h")

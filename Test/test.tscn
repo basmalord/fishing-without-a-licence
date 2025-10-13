@@ -1,69 +1,472 @@
-[gd_scene load_steps=9 format=3 uid="uid://b80huqnj56on4"]
+[gd_scene load_steps=11 format=3 uid="uid://b80huqnj56on4"]
 
-[ext_resource type="Texture2D" uid="uid://dfom3jtobuf3x" path="res://Environment/Textures/big_map.jpg" id="1_jda1s"]
 [ext_resource type="Script" uid="uid://c15wev30rr5g6" path="res://Test/test.gd" id="1_su4bj"]
 [ext_resource type="PackedScene" uid="uid://cs837suu5yuex" path="res://PlayerCharacter/player_character.tscn" id="1_yfa23"]
-[ext_resource type="PackedScene" uid="uid://bddn755htwgg3" path="res://Effects/Kill/kill.tscn" id="4_1ihti"]
+[ext_resource type="Texture2D" uid="uid://cetjqipdq7k2w" path="res://Environment/Textures/smaller_map.png" id="2_1ihti"]
+[ext_resource type="Script" uid="uid://bwo8do2giwflp" path="res://Admin/projectile_manager.gd" id="6_hxhys"]
 [ext_resource type="PackedScene" uid="uid://2n2jitceoykg" path="res://Fishing/Area/fishing_area.tscn" id="6_wbqg2"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxhys"]
-size = Vector2(170, 20)
+[ext_resource type="PackedScene" uid="uid://dn065u800j1c0" path="res://NPCs/Merchants/merchant_base.tscn" id="7_hxhys"]
+[ext_resource type="PackedScene" uid="uid://r76erla8whai" path="res://NPCs/Enemies/Police/Shotgun/shotgun_police.tscn" id="8_y0opt"]
+[ext_resource type="PackedScene" uid="uid://dw547a0evqmd1" path="res://NPCs/Enemies/Police/Pistol/pistol_police.tscn" id="9_gpqib"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_su4bj"]
-size = Vector2(20, 54.8648)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wbqg2"]
-size = Vector2(20, 64)
+size = Vector2(20, 27.9213)
 
 [node name="test" type="Node2D"]
 script = ExtResource("1_su4bj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-143, -433)
-texture = ExtResource("1_jda1s")
+z_index = -6
+position = Vector2(533, -1564)
+texture = ExtResource("2_1ihti")
 
 [node name="PlayerCharacter" parent="." groups=["Player"] instance=ExtResource("1_yfa23")]
-position = Vector2(-1, 0)
+position = Vector2(462, -183)
 motion_mode = 1
-speed = 75
-sprint_modifier = 75
 
-[node name="Kill" parent="." instance=ExtResource("4_1ihti")]
-position = Vector2(171, 190)
-
-[node name="Button" type="Button" parent="."]
-offset_left = 88.0
-offset_top = 2.0
-offset_right = 179.0
-offset_bottom = 33.0
-text = "Descale
-"
+[node name="ProjectileManager" type="Node" parent="." groups=["ProjectileManager"]]
+script = ExtResource("6_hxhys")
+projectile_paths = Array[String](["res://Projectiles/Damage/Bullet/damage_bullet.tscn"])
+metadata/_custom_type_script = "uid://bwo8do2giwflp"
 
 [node name="FishingArea" parent="." instance=ExtResource("6_wbqg2")]
-position = Vector2(-230, -105)
 direction_of_water = "Up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea"]
-position = Vector2(76, -12)
-scale = Vector2(1.04457, -1.03159)
-shape = SubResource("RectangleShape2D_hxhys")
+position = Vector2(531, -382)
+scale = Vector2(35.9735, -1.01759)
+shape = SubResource("RectangleShape2D_su4bj")
 
 [node name="FishingArea2" parent="." instance=ExtResource("6_wbqg2")]
-position = Vector2(-11, -187)
-direction_of_water = "Left"
+position = Vector2(-777, -297)
+direction_of_water = "Up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea2"]
-position = Vector2(-13, 3)
-rotation = -3.14159
-scale = Vector2(1.28408, -1.22118)
+position = Vector2(676, -460)
+scale = Vector2(15.7255, -1.183)
 shape = SubResource("RectangleShape2D_su4bj")
 
 [node name="FishingArea3" parent="." instance=ExtResource("6_wbqg2")]
-position = Vector2(-272, -178)
-direction_of_water = "Right"
+position = Vector2(-1203, -755)
+direction_of_water = "Up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea3"]
-position = Vector2(12, 1)
+position = Vector2(349, -405)
+scale = Vector2(55.1202, -1.31238)
+shape = SubResource("RectangleShape2D_su4bj")
+
+[node name="FishingArea4" parent="." instance=ExtResource("6_wbqg2")]
+position = Vector2(1157, -371)
+direction_of_water = "Up"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea4"]
+position = Vector2(349, -405)
+scale = Vector2(55.1202, -1.31238)
+shape = SubResource("RectangleShape2D_su4bj")
+
+[node name="FishingArea5" parent="." instance=ExtResource("6_wbqg2")]
+position = Vector2(1617, -692)
+direction_of_water = "Up"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea5"]
+position = Vector2(676, -460)
+scale = Vector2(15.7255, -1.183)
+shape = SubResource("RectangleShape2D_su4bj")
+
+[node name="FishingArea6" parent="." instance=ExtResource("6_wbqg2")]
+position = Vector2(-3011, -696)
+direction_of_water = "Up"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea6"]
+position = Vector2(676, -460)
+scale = Vector2(15.7255, -1.183)
+shape = SubResource("RectangleShape2D_su4bj")
+
+[node name="FishingArea7" parent="." instance=ExtResource("6_wbqg2")]
+position = Vector2(-1157, -1203)
+direction_of_water = "Down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea7"]
+position = Vector2(531, -382)
+scale = Vector2(35.9735, -1.01759)
+shape = SubResource("RectangleShape2D_su4bj")
+
+[node name="FishingArea8" parent="." instance=ExtResource("6_wbqg2")]
+position = Vector2(-278, -1582)
+scale = Vector2(0.43889, 1)
+direction_of_water = "Down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea8"]
+position = Vector2(531, -382)
+scale = Vector2(35.9735, -1.01759)
+shape = SubResource("RectangleShape2D_su4bj")
+
+[node name="FishingArea9" parent="." instance=ExtResource("6_wbqg2")]
+position = Vector2(-1420, -1587)
+scale = Vector2(0.43889, 1)
+direction_of_water = "Down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea9"]
+position = Vector2(531, -382)
+scale = Vector2(35.9735, -1.01759)
+shape = SubResource("RectangleShape2D_su4bj")
+
+[node name="FishingArea10" parent="." instance=ExtResource("6_wbqg2")]
+position = Vector2(2034, -1582)
+scale = Vector2(0.43889, 1)
+direction_of_water = "Down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea10"]
+position = Vector2(531, -382)
+scale = Vector2(35.9735, -1.01759)
+shape = SubResource("RectangleShape2D_su4bj")
+
+[node name="FishingArea11" parent="." instance=ExtResource("6_wbqg2")]
+position = Vector2(921, -1967)
+scale = Vector2(0.43889, 1)
+direction_of_water = "Down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea11"]
+position = Vector2(405.569, -382)
+scale = Vector2(191.993, -1.6256)
+shape = SubResource("RectangleShape2D_su4bj")
+
+[node name="FishingArea12" parent="." instance=ExtResource("6_wbqg2")]
+position = Vector2(-1089, -1100)
+rotation = -1.5708
+scale = Vector2(0.43889, 1)
+direction_of_water = "Right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea12"]
+position = Vector2(1180.25, -401)
+scale = Vector2(62.53, -1.18214)
+shape = SubResource("RectangleShape2D_su4bj")
+
+[node name="FishingArea13" parent="." instance=ExtResource("6_wbqg2")]
+position = Vector2(-1317, -1362)
+rotation = -1.5708
+scale = Vector2(0.43889, 1)
+direction_of_water = "Left"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea13"]
+position = Vector2(1353.41, -405)
+scale = Vector2(80.0198, -1.90833)
+shape = SubResource("RectangleShape2D_su4bj")
+
+[node name="FishingArea14" parent="." instance=ExtResource("6_wbqg2")]
+position = Vector2(122, -424)
+rotation = -1.5708
+scale = Vector2(0.43889, 1)
+direction_of_water = "Right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea14"]
+position = Vector2(1241.77, -392)
+scale = Vector2(-31.2957, -1.97162)
+shape = SubResource("RectangleShape2D_su4bj")
+
+[node name="FishingArea15" parent="." instance=ExtResource("6_wbqg2")]
+position = Vector2(513, -1653)
+rotation = -1.5708
+scale = Vector2(0.43889, 1)
+direction_of_water = "Right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea15"]
+position = Vector2(1241.77, -392)
+scale = Vector2(-31.2957, -1.97162)
+shape = SubResource("RectangleShape2D_su4bj")
+
+[node name="FishingArea16" parent="." instance=ExtResource("6_wbqg2")]
+position = Vector2(2476, -1611)
+rotation = -1.5708
+scale = Vector2(0.43889, 1)
+direction_of_water = "Left"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea16"]
+position = Vector2(1241.77, -392)
+scale = Vector2(-31.2957, -1.97162)
+shape = SubResource("RectangleShape2D_su4bj")
+
+[node name="FishingArea17" parent="." instance=ExtResource("6_wbqg2")]
+position = Vector2(2476, -450)
+rotation = -1.5708
+scale = Vector2(0.43889, 1)
+direction_of_water = "Left"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea17"]
+position = Vector2(1241.77, -392)
+scale = Vector2(-31.2957, -1.97162)
+shape = SubResource("RectangleShape2D_su4bj")
+
+[node name="MerchantBody" parent="." instance=ExtResource("7_hxhys")]
+position = Vector2(-1042, 144)
+rod_type = "Yellow"
+cost = {
+"Blue Fish": 5,
+"Gold Fish": 0,
+"Purple Fish": 0,
+"Red Fish": 0
+}
+
+[node name="MerchantBody2" parent="." instance=ExtResource("7_hxhys")]
+position = Vector2(2240, -2887)
+rod_type = "Red"
+cost = {
+"Blue Fish": 10,
+"Gold Fish": 5,
+"Purple Fish": 0,
+"Red Fish": 0
+}
+
+[node name="MerchantBody3" parent="." instance=ExtResource("7_hxhys")]
+position = Vector2(-1635, -3054)
+rod_type = "Purple"
+cost = {
+"Blue Fish": 20,
+"Gold Fish": 15,
+"Purple Fish": 0,
+"Red Fish": 10
+}
+
+[node name="barrier" type="StaticBody2D" parent="."]
+position = Vector2(-2176, -554)
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier"]
+position = Vector2(-96, 173)
+scale = Vector2(10.3977, -51.3914)
 shape = SubResource("RectangleShape2D_wbqg2")
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="barrier2" type="StaticBody2D" parent="."]
+position = Vector2(-1976, 644)
+rotation = -0.601243
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier2"]
+position = Vector2(-96, 173)
+scale = Vector2(10.3977, -51.3914)
+shape = SubResource("RectangleShape2D_wbqg2")
+
+[node name="barrier3" type="StaticBody2D" parent="."]
+position = Vector2(-1126, 1172)
+rotation = -1.71749
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier3"]
+position = Vector2(-96, 173)
+scale = Vector2(10.3977, -51.3914)
+shape = SubResource("RectangleShape2D_wbqg2")
+
+[node name="barrier4" type="StaticBody2D" parent="."]
+position = Vector2(-263, 1192)
+rotation = -3.15151
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier4"]
+position = Vector2(-96, 173)
+scale = Vector2(10.3977, -51.3914)
+shape = SubResource("RectangleShape2D_wbqg2")
+
+[node name="barrier5" type="StaticBody2D" parent="."]
+position = Vector2(652, 508)
+rotation = -4.70504
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier5"]
+position = Vector2(-96, 173)
+scale = Vector2(10.3977, -51.3914)
+shape = SubResource("RectangleShape2D_wbqg2")
+
+[node name="barrier6" type="StaticBody2D" parent="."]
+position = Vector2(2212, 508)
+rotation = -4.70504
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier6"]
+position = Vector2(-96, 173)
+scale = Vector2(10.3977, -51.3914)
+shape = SubResource("RectangleShape2D_wbqg2")
+
+[node name="barrier7" type="StaticBody2D" parent="."]
+position = Vector2(2986, -292)
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier7"]
+position = Vector2(-96, 173)
+scale = Vector2(10.3977, -51.3914)
+shape = SubResource("RectangleShape2D_wbqg2")
+
+[node name="barrier8" type="StaticBody2D" parent="."]
+position = Vector2(3196, -1647)
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier8"]
+position = Vector2(-96, 173)
+scale = Vector2(10.3977, -51.3914)
+shape = SubResource("RectangleShape2D_wbqg2")
+
+[node name="barrier9" type="StaticBody2D" parent="."]
+position = Vector2(3192, -2794)
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier9"]
+position = Vector2(-96, 173)
+scale = Vector2(10.3977, -123.448)
+shape = SubResource("RectangleShape2D_wbqg2")
+
+[node name="barrier10" type="StaticBody2D" parent="."]
+position = Vector2(1561, -3581)
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier10"]
+position = Vector2(-96, 173)
+scale = Vector2(10.3977, -51.3914)
+shape = SubResource("RectangleShape2D_wbqg2")
+
+[node name="barrier11" type="StaticBody2D" parent="."]
+position = Vector2(3717, -4377)
+scale = Vector2(14.1013, 0.955974)
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier11"]
+position = Vector2(-96, 173)
+scale = Vector2(10.3977, -51.3914)
+shape = SubResource("RectangleShape2D_wbqg2")
+
+[node name="barrier12" type="StaticBody2D" parent="."]
+position = Vector2(520, -5528)
+rotation = -1.5708
+scale = Vector2(14.1013, 0.955974)
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier12"]
+position = Vector2(-96, 173)
+scale = Vector2(10.3977, -51.3914)
+shape = SubResource("RectangleShape2D_wbqg2")
+
+[node name="barrier13" type="StaticBody2D" parent="."]
+position = Vector2(270, -4388)
+scale = Vector2(14.1013, 0.955974)
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier13"]
+position = Vector2(-96, 173)
+scale = Vector2(10.3977, -51.3914)
+shape = SubResource("RectangleShape2D_wbqg2")
+
+[node name="barrier14" type="StaticBody2D" parent="."]
+position = Vector2(-2593, -3977)
+rotation = -1.5708
+scale = Vector2(14.1013, 0.955974)
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier14"]
+position = Vector2(-96, 173)
+scale = Vector2(10.3977, -51.3914)
+shape = SubResource("RectangleShape2D_wbqg2")
+
+[node name="barrier15" type="StaticBody2D" parent="."]
+position = Vector2(190, -1349)
+scale = Vector2(-9.49848, -1.06461)
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier15"]
+position = Vector2(-96, 173)
+scale = Vector2(10.3977, -51.3914)
+shape = SubResource("RectangleShape2D_wbqg2")
+
+[node name="barrier16" type="StaticBody2D" parent="."]
+position = Vector2(173, -596)
+scale = Vector2(-3.73996, -0.303677)
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier16"]
+position = Vector2(-96, 173)
+scale = Vector2(10.3977, -51.3914)
+shape = SubResource("RectangleShape2D_wbqg2")
+
+[node name="barrier17" type="StaticBody2D" parent="."]
+position = Vector2(-1422, -1341)
+scale = Vector2(-5.93889, -0.278294)
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier17"]
+position = Vector2(-96, 173)
+scale = Vector2(10.3977, -51.3914)
+shape = SubResource("RectangleShape2D_wbqg2")
+
+[node name="barrier18" type="StaticBody2D" parent="."]
+position = Vector2(-1407, -1744)
+scale = Vector2(-1.95324, -0.207823)
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier18"]
+position = Vector2(-96, 173)
+scale = Vector2(10.3977, -51.3914)
+shape = SubResource("RectangleShape2D_wbqg2")
+
+[node name="barrier19" type="StaticBody2D" parent="."]
+position = Vector2(-219, -1232)
+scale = Vector2(-1.63801, -0.800436)
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier19"]
+position = Vector2(-96, 173)
+scale = Vector2(10.3977, -51.3914)
+shape = SubResource("RectangleShape2D_wbqg2")
+
+[node name="barrier20" type="StaticBody2D" parent="."]
+position = Vector2(2106, -1467)
+scale = Vector2(-1.60575, -0.510555)
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier20"]
+position = Vector2(-96, 173)
+scale = Vector2(10.3977, -51.3914)
+shape = SubResource("RectangleShape2D_wbqg2")
+
+[node name="PistolPolice" parent="." instance=ExtResource("9_gpqib")]
+position = Vector2(2503, 135)
+
+[node name="PistolPolice2" parent="." instance=ExtResource("9_gpqib")]
+position = Vector2(1446, -525)
+
+[node name="PistolPolice3" parent="." instance=ExtResource("9_gpqib")]
+position = Vector2(1121, 171)
+
+[node name="PistolPolice4" parent="." instance=ExtResource("9_gpqib")]
+position = Vector2(-774, -801)
+
+[node name="PistolPolice5" parent="." instance=ExtResource("9_gpqib")]
+position = Vector2(-1621, -1319)
+
+[node name="PistolPolice6" parent="." instance=ExtResource("9_gpqib")]
+position = Vector2(-659, -2186)
+
+[node name="PistolPolice7" parent="." instance=ExtResource("9_gpqib")]
+position = Vector2(-81, -2429)
+
+[node name="PistolPolice8" parent="." instance=ExtResource("9_gpqib")]
+position = Vector2(2031, -2588)
+
+[node name="PistolPolice9" parent="." instance=ExtResource("9_gpqib")]
+position = Vector2(2785, -1998)
+
+[node name="PistolPolice10" parent="." instance=ExtResource("9_gpqib")]
+position = Vector2(-1016, -3074)
+
+[node name="ShotgunPolice" parent="." instance=ExtResource("8_y0opt")]
+position = Vector2(-1265, -2469)
+
+[node name="ShotgunPolice2" parent="." instance=ExtResource("8_y0opt")]
+position = Vector2(2450, -708)
+
+[node name="ShotgunPolice3" parent="." instance=ExtResource("8_y0opt")]
+position = Vector2(985, -2548)
+
+[node name="ShotgunPolice4" parent="." instance=ExtResource("8_y0opt")]
+position = Vector2(-1758, -423)
+
+[node name="ShotgunPolice5" parent="." instance=ExtResource("8_y0opt")]
+position = Vector2(-122, -423)

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c68nf8euwnnks"]
+
+[ext_resource type="Script" uid="uid://cwo4lg8nx8hmb" path="res://PlayerCharacter/player_damage_area.gd" id="1_ja0nb"]
+
+[node name="Player_Damage_Area" type="Area2D"]
+collision_layer = 16
+script = ExtResource("1_ja0nb")
+
+[connection signal="area_entered" from="." to="." method="_on_projectile_entered"]

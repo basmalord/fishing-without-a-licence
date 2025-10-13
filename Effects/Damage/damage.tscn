@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bieuebq2iqr3x"]
+
+[ext_resource type="Script" uid="uid://dgou52il8j0gl" path="res://Effects/Damage/damage.gd" id="1_qibow"]
+
+[node name="DamageEffect" type="Area2D"]
+collision_layer = 16
+script = ExtResource("1_qibow")
+metadata/_custom_type_script = "uid://bxiaat6tcyban"

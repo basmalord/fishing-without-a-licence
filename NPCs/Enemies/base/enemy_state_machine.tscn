@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjj4wu8tajao3"]
+
+[ext_resource type="Script" uid="uid://dkmj1nahooh3l" path="res://NPCs/Enemies/base/enemy_state_machine.gd" id="1_kojoj"]
+
+[node name="EnemyStateMachine" type="Node"]
+script = ExtResource("1_kojoj")

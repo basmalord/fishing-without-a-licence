@@ -1,6 +1,6 @@
 extends Node2D
 
-
+@onready var player: Player = get_tree().get_first_node_in_group("Player")
 
 func _on_button_pressed() -> void:
 	for n in get_children().size():

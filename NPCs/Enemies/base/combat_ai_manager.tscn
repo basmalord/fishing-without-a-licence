@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://pymcmg04k0ua"]
+
+[ext_resource type="Script" uid="uid://cyuvw074i08rf" path="res://NPCs/Enemies/base/combat_ai_manager.gd" id="1_rmbfx"]
+
+[node name="CombatAiManager" type="Node"]
+script = ExtResource("1_rmbfx")
+
+[node name="ProjectileTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true

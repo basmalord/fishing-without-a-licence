@@ -1,14 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://qfg7505cfold"]
+[gd_scene load_steps=6 format=3 uid="uid://qfg7505cfold"]
 
 [ext_resource type="Script" uid="uid://b1ajmhyspdsce" path="res://NPCs/Enemies/Police/NoWeapons/no_weapons_police.gd" id="1_vbcsh"]
 [ext_resource type="SpriteFrames" uid="uid://bkl1jiuy4wjyq" path="res://NPCs/Enemies/Police/NoWeapons/Animations/no_weapons_police_sprite_frames.tres" id="2_es2hk"]
+[ext_resource type="PackedScene" uid="uid://cf8swnouy1k8g" path="res://NPCs/Enemies/base/alert_area.tscn" id="3_j7ull"]
+[ext_resource type="PackedScene" uid="uid://bjj4wu8tajao3" path="res://NPCs/Enemies/base/enemy_state_machine.tscn" id="4_hbj0w"]
+[ext_resource type="PackedScene" uid="uid://pymcmg04k0ua" path="res://NPCs/Enemies/base/combat_ai_manager.tscn" id="5_hbj0w"]
 
 [node name="NoWeaponsPolice" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_vbcsh")
 attack_type = "Kill"
 attack_size = Vector2(1, 1)
-speed = 50
+speed = 80
 sprite_frames = ExtResource("2_es2hk")
 npc_name = "No Weapons Police"
 npc_type = "Enemy"
 metadata/_custom_type_script = "uid://c5sn5pur5mwh5"
+
+[node name="AlertArea" parent="." instance=ExtResource("3_j7ull")]
+enemy_alert_area_size = 40.0
+
+[node name="EnemyStateMachine" parent="." instance=ExtResource("4_hbj0w")]
+
+[node name="CombatAiManager" parent="." instance=ExtResource("5_hbj0w")]

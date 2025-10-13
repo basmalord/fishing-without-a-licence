@@ -1,19 +1,34 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs837suu5yuex"]
+[gd_scene load_steps=11 format=3 uid="uid://cs837suu5yuex"]
 
 [ext_resource type="Script" uid="uid://c41e3m23ifaa4" path="res://PlayerCharacter/player_character_script.gd" id="1_jnfdi"]
 [ext_resource type="SpriteFrames" uid="uid://bihvdv463phr" path="res://PlayerCharacter/Animation_Sprite_Frames/player_character_sprite_frames.tres" id="2_iqp7p"]
 [ext_resource type="Script" uid="uid://dwfbn3clr6bnq" path="res://Fishing/Handler/fishing_handler.gd" id="3_wo4jc"]
+[ext_resource type="Texture2D" uid="uid://b0a631njlibxn" path="res://Fishing/Textures/Items/Rod2.png" id="4_hh3aq"]
+[ext_resource type="Script" uid="uid://knmjt60w8f8a" path="res://PlayerCharacter/rod.gd" id="5_v77wv"]
+[ext_resource type="PackedScene" uid="uid://c6im5l1bx808w" path="res://Admin/points_handler.tscn" id="6_7pk2q"]
+[ext_resource type="Script" uid="uid://52b5n35d0m2i" path="res://Admin/visual_effect_handler.gd" id="7_7pon7"]
+[ext_resource type="Texture2D" uid="uid://ryoyh2gfg8h2" path="res://PlayerCharacter/Other Textures/Heart.png" id="8_77nnt"]
+[ext_resource type="Script" uid="uid://b7x8mdqo6a8yh" path="res://Admin/fish_counter.gd" id="9_4q8d5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jijpc"]
 
 [node name="PlayerCharacter" type="CharacterBody2D"]
-collision_mask = 14
+collision_mask = 255
 platform_floor_layers = 4294967040
+platform_wall_layers = 128
 script = ExtResource("1_jnfdi")
+speed = 75
+sprint_modifier = 75
+fishing_rod_type = "Default"
+
+[node name="Rod" type="Sprite2D" parent="."]
+position = Vector2(-57, -30)
+texture = ExtResource("4_hh3aq")
+script = ExtResource("5_v77wv")
 
 [node name="PlayerAnimatedSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("2_iqp7p")
-animation = &"FishingSideways"
+animation = &"FishingUp"
 autoplay = "Idle"
 
 [node name="PlayerBox" type="CollisionShape2D" parent="."]
@@ -26,3 +41,38 @@ shape = SubResource("CapsuleShape2D_jijpc")
 [node name="FishingHandler" type="Node" parent="."]
 script = ExtResource("3_wo4jc")
 metadata/_custom_type_script = "uid://dwfbn3clr6bnq"
+
+[node name="PointsHandler" parent="." instance=ExtResource("6_7pk2q")]
+offset_left = -19.0
+offset_top = -285.0
+offset_right = -19.0
+offset_bottom = -285.0
+
+[node name="VisualEffectHandler" type="Node" parent="."]
+script = ExtResource("7_7pon7")
+metadata/_custom_type_script = "uid://52b5n35d0m2i"
+
+[node name="Heart1" type="Sprite2D" parent="." groups=["hearts"]]
+position = Vector2(-316, -261)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_77nnt")
+
+[node name="Heart2" type="Sprite2D" parent="." groups=["hearts"]]
+position = Vector2(-406, -261)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_77nnt")
+
+[node name="Heart3" type="Sprite2D" parent="." groups=["hearts"]]
+position = Vector2(-506, -260)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_77nnt")
+
+[node name="FishCounter" type="Node" parent="."]
+script = ExtResource("9_4q8d5")
+metadata/_custom_type_script = "uid://b7x8mdqo6a8yh"
+
+[node name="UIRod" type="Sprite2D" parent="."]
+position = Vector2(438, -249)
+texture = ExtResource("4_hh3aq")
+
+[connection signal="animation_looped" from="PlayerAnimatedSprite" to="FishingHandler" method="_on_fishing_animation_looped"]

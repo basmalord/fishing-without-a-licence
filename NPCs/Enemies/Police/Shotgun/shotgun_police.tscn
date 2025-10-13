@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://r76erla8whai"]
+
+[ext_resource type="Script" uid="uid://c5sn5pur5mwh5" path="res://NPCs/Enemies/base/enemy.gd" id="1_1dl6a"]
+[ext_resource type="SpriteFrames" uid="uid://o47fj28wl0jr" path="res://NPCs/Enemies/Police/Shotgun/Animations/shotgun_police_animation_sprites.tres" id="2_2rrmj"]
+[ext_resource type="PackedScene" uid="uid://pymcmg04k0ua" path="res://NPCs/Enemies/base/combat_ai_manager.tscn" id="5_bnh2o"]
+[ext_resource type="PackedScene" uid="uid://cf8swnouy1k8g" path="res://NPCs/Enemies/base/alert_area.tscn" id="22_77g3b"]
+[ext_resource type="PackedScene" uid="uid://bjj4wu8tajao3" path="res://NPCs/Enemies/base/enemy_state_machine.tscn" id="23_2fdnc"]
+
+[node name="ShotgunPolice" type="CharacterBody2D"]
+script = ExtResource("1_1dl6a")
+projectile_type = "Damage Bullet"
+speed = 50
+sprite_frames = ExtResource("2_2rrmj")
+npc_name = "Shotgun Police"
+npc_type = "Enemy"
+metadata/_custom_type_script = "uid://c5sn5pur5mwh5"
+
+[node name="AlertArea" parent="." instance=ExtResource("22_77g3b")]
+enemy_alert_area_size = 40.0
+
+[node name="EnemyStateMachine" parent="." instance=ExtResource("23_2fdnc")]
+
+[node name="CombatAiManager" parent="." instance=ExtResource("5_bnh2o")]

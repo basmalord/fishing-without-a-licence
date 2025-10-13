@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf8swnouy1k8g"]
+
+[ext_resource type="Script" uid="uid://b25ssani80hr6" path="res://NPCs/Enemies/base/alert_area.gd" id="1_efgaq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_meol8"]
+
+[node name="AlertArea" type="Area2D"]
+collision_layer = 32
+script = ExtResource("1_efgaq")
+enemy_alert_area_size = 20.0
+
+[node name="EnemyAlertBox" type="CollisionShape2D" parent="."]
+scale = Vector2(13.0809, -17.4301)
+shape = SubResource("CircleShape2D_meol8")
+debug_color = Color(0.809034, 0.298158, 0.723077, 0.42)

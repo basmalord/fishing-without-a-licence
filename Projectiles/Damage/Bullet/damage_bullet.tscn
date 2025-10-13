@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddnp7xues4x3f"]
+
+[ext_resource type="Script" uid="uid://cnp2ejb0qwdqw" path="res://Projectiles/Damage/Bullet/damage_bullet.gd" id="1_t30c6"]
+[ext_resource type="Texture2D" uid="uid://bawmwd11oqnr7" path="res://icon.svg" id="2_ehkyx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ehkyx"]
+
+[node name="DamageBullet" type="Area2D"]
+collision_layer = 16
+script = ExtResource("1_t30c6")
+speed = 300.0
+damage = 1
+metadata/_custom_type_script = "uid://dgou52il8j0gl"
+
+[node name="Bullet" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_ehkyx")
+
+[node name="DamageBulletBox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ehkyx")

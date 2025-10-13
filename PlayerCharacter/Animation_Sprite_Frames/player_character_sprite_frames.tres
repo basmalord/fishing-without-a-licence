@@ -1,21 +1,30 @@
-[gd_resource type="SpriteFrames" load_steps=37 format=3 uid="uid://bihvdv463phr"]
+[gd_resource type="SpriteFrames" load_steps=46 format=3 uid="uid://bihvdv463phr"]
 
+[ext_resource type="Texture2D" uid="uid://dwk4tq3eoky61" path="res://PlayerCharacter/Animation_Textures/Fishing/Down/frame0000.png" id="1_8wuey"]
 [ext_resource type="Texture2D" uid="uid://dbxuehkxkxywu" path="res://PlayerCharacter/Animation_Textures/Idle/frame0006.png" id="1_a3uvs"]
 [ext_resource type="Texture2D" uid="uid://cxed6q5qnxmvl" path="res://PlayerCharacter/Animation_Textures/Fishing/Sideways/frame0000.png" id="1_mllye"]
 [ext_resource type="Texture2D" uid="uid://7kcj4e0i2btl" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0000.png" id="2_3snqc"]
 [ext_resource type="Texture2D" uid="uid://bfwnsqnviv6vx" path="res://PlayerCharacter/Animation_Textures/Fishing/Sideways/frame0001.png" id="2_5plkd"]
+[ext_resource type="Texture2D" uid="uid://c1qumigl2riij" path="res://PlayerCharacter/Animation_Textures/Fishing/Down/frame0001.png" id="2_cy50h"]
+[ext_resource type="Texture2D" uid="uid://d1di8lgh0v8mq" path="res://PlayerCharacter/Animation_Textures/Fishing/Down/frame0002.png" id="3_5ro81"]
 [ext_resource type="Texture2D" uid="uid://djapc25ean52w" path="res://PlayerCharacter/Animation_Textures/Fishing/Sideways/frame0002.png" id="3_52w0n"]
 [ext_resource type="Texture2D" uid="uid://vgsdcthjy6ir" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0001.png" id="3_ghmnn"]
 [ext_resource type="Texture2D" uid="uid://bto72ewu54b7p" path="res://PlayerCharacter/Animation_Textures/Fishing/Sideways/frame0003.png" id="4_pjm8y"]
 [ext_resource type="Texture2D" uid="uid://b4jlpptyebd4r" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0002.png" id="4_rihh3"]
+[ext_resource type="Texture2D" uid="uid://dmr0nlxxn1gra" path="res://PlayerCharacter/Animation_Textures/Fishing/Down/frame0003.png" id="4_vqenm"]
+[ext_resource type="Texture2D" uid="uid://dm8obm3lm1ijm" path="res://PlayerCharacter/Animation_Textures/Fishing/Down/frame0004.png" id="5_fg5ur"]
 [ext_resource type="Texture2D" uid="uid://drpwym1uwy4ii" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0003.png" id="5_fwkmo"]
 [ext_resource type="Texture2D" uid="uid://d10p7b1cuadph" path="res://PlayerCharacter/Animation_Textures/Fishing/Sideways/frame0004.png" id="5_rwhqp"]
 [ext_resource type="Texture2D" uid="uid://dll5up6fwxovg" path="res://PlayerCharacter/Animation_Textures/Fishing/Sideways/frame0005.png" id="6_6a8gc"]
 [ext_resource type="Texture2D" uid="uid://dic0vn2awcjp5" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0004.png" id="6_br214"]
+[ext_resource type="Texture2D" uid="uid://b2cvwm15dqkhl" path="res://PlayerCharacter/Animation_Textures/Fishing/Down/frame0005.png" id="6_qok6g"]
+[ext_resource type="Texture2D" uid="uid://dmbb6qxbx106j" path="res://PlayerCharacter/Animation_Textures/Fishing/Down/frame0006.png" id="7_kud2a"]
 [ext_resource type="Texture2D" uid="uid://cyqfsb4wqfevn" path="res://PlayerCharacter/Animation_Textures/Fishing/Sideways/frame0006.png" id="7_lasow"]
 [ext_resource type="Texture2D" uid="uid://bmwxocswobq13" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0005.png" id="7_xh5ey"]
 [ext_resource type="Texture2D" uid="uid://dsnheaykxnl7v" path="res://PlayerCharacter/Animation_Textures/Fishing/Sideways/frame0007.png" id="8_5hb3s"]
 [ext_resource type="Texture2D" uid="uid://dn5rgn465bs42" path="res://PlayerCharacter/Animation_Textures/MoveAwayFromCamera/frame0006.png" id="8_hsss6"]
+[ext_resource type="Texture2D" uid="uid://cb6sstmcytk1e" path="res://PlayerCharacter/Animation_Textures/Fishing/Down/frame0007.png" id="8_qnmwl"]
+[ext_resource type="Texture2D" uid="uid://d23j1ey4d3rv" path="res://PlayerCharacter/Animation_Textures/Fishing/Down/frame0008.png" id="9_1q7pe"]
 [ext_resource type="Texture2D" uid="uid://ciiuqvbrbbh0u" path="res://PlayerCharacter/Animation_Textures/MoveSideways/frame0000.png" id="9_hq8ic"]
 [ext_resource type="Texture2D" uid="uid://ctjuy2ku6j73r" path="res://PlayerCharacter/Animation_Textures/Fishing/Sideways/frame0008.png" id="9_o7qhp"]
 [ext_resource type="Texture2D" uid="uid://p0xaioxd1rsr" path="res://PlayerCharacter/Animation_Textures/Fishing/Up/frame0000.png" id="10_8wuey"]
@@ -39,7 +48,34 @@
 
 [resource]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8wuey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_cy50h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5ro81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vqenm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fg5ur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qok6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kud2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qnmwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1q7pe")
+}],
 "loop": true,
 "name": &"FishingDown",
 "speed": 5.0

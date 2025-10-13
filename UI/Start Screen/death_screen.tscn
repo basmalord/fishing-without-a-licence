@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhkwq8i6ph8nu"]
+
+[ext_resource type="Script" uid="uid://buh6b6lxli746" path="res://UI/Start Screen/death_screen.gd" id="1_shpoy"]
+
+[node name="DeathScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_shpoy")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 0
+offset_left = 142.0
+offset_top = 13.0
+offset_right = 1142.0
+offset_bottom = 53.0
+theme_override_font_sizes/normal_font_size = 25
+text = "Looks like you died. Died while fishing without licence. Try again?"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 194.0
+offset_right = 257.0
+offset_bottom = 225.0
+text = "Yes"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 723.0
+offset_top = 189.0
+offset_right = 754.0
+offset_bottom = 220.0
+text = "No"

@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdjmlkb62b03g"]
+
+[ext_resource type="Script" uid="uid://ftth4uq5tim0" path="res://UI/Start Screen/start_screen.gd" id="1_u0yt3"]
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u0yt3")
+
+[node name="Exposition" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 49.0
+offset_right = 1085.0
+offset_bottom = 549.0
+theme_override_font_sizes/normal_font_size = 25
+text = "Welcome to Fishing Without Licence! You play as Joe, a man who loves to fish, but hates licences of all kinds- especially those pertaining to fishing! He's found himself in trouble with the law again after fishing at his local park. Collect as many fish as you can before the police stop you- and try and unlock all the rods!"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 539.0
+offset_top = 337.0
+offset_right = 596.0
+offset_bottom = 368.0
+text = "BEGIN"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

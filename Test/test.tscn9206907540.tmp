@@ -1,0 +1,98 @@
+[gd_scene load_steps=14 format=3 uid="uid://b80huqnj56on4"]
+
+[ext_resource type="Texture2D" uid="uid://dfom3jtobuf3x" path="res://Environment/Textures/big_map.jpg" id="1_jda1s"]
+[ext_resource type="Script" uid="uid://c15wev30rr5g6" path="res://Test/test.gd" id="1_su4bj"]
+[ext_resource type="PackedScene" uid="uid://cs837suu5yuex" path="res://PlayerCharacter/player_character.tscn" id="1_yfa23"]
+[ext_resource type="PackedScene" uid="uid://bddn755htwgg3" path="res://Effects/Kill/kill.tscn" id="4_1ihti"]
+[ext_resource type="Script" uid="uid://bwo8do2giwflp" path="res://Admin/projectile_manager.gd" id="6_hxhys"]
+[ext_resource type="PackedScene" uid="uid://2n2jitceoykg" path="res://Fishing/Area/fishing_area.tscn" id="6_wbqg2"]
+[ext_resource type="PackedScene" uid="uid://qfg7505cfold" path="res://NPCs/Enemies/Police/NoWeapons/no_weapons_police.tscn" id="7_hxhys"]
+[ext_resource type="PackedScene" uid="uid://r76erla8whai" path="res://NPCs/Enemies/Police/Shotgun/shotgun_police.tscn" id="8_y0opt"]
+[ext_resource type="PackedScene" uid="uid://dw547a0evqmd1" path="res://NPCs/Enemies/Police/Pistol/pistol_police.tscn" id="9_gpqib"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxhys"]
+size = Vector2(170, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_su4bj"]
+size = Vector2(20, 54.8648)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbqg2"]
+size = Vector2(20, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6kqi2"]
+size = Vector2(88, 19.5)
+
+[node name="test" type="Node2D"]
+script = ExtResource("1_su4bj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-143, -433)
+texture = ExtResource("1_jda1s")
+
+[node name="PlayerCharacter" parent="." groups=["Player"] instance=ExtResource("1_yfa23")]
+position = Vector2(-532, -513)
+motion_mode = 1
+speed = 75
+sprint_modifier = 75
+
+[node name="Kill" parent="." instance=ExtResource("4_1ihti")]
+position = Vector2(171, 190)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 88.0
+offset_top = 2.0
+offset_right = 179.0
+offset_bottom = 33.0
+text = "Descale
+"
+
+[node name="FishingArea" parent="." instance=ExtResource("6_wbqg2")]
+position = Vector2(-230, -105)
+direction_of_water = "Up"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea"]
+position = Vector2(76, -12)
+scale = Vector2(1.04457, -1.03159)
+shape = SubResource("RectangleShape2D_hxhys")
+
+[node name="FishingArea2" parent="." instance=ExtResource("6_wbqg2")]
+position = Vector2(-11, -187)
+direction_of_water = "Left"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea2"]
+position = Vector2(-13, 3)
+rotation = -3.14159
+scale = Vector2(1.28408, -1.22118)
+shape = SubResource("RectangleShape2D_su4bj")
+
+[node name="FishingArea3" parent="." instance=ExtResource("6_wbqg2")]
+position = Vector2(-272, -178)
+direction_of_water = "Right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea3"]
+position = Vector2(12, 1)
+shape = SubResource("RectangleShape2D_wbqg2")
+
+[node name="FishingArea4" parent="." instance=ExtResource("6_wbqg2")]
+position = Vector2(-454, -521)
+direction_of_water = "Down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishingArea4"]
+position = Vector2(60, 74)
+shape = SubResource("RectangleShape2D_6kqi2")
+
+[node name="ProjectileManager" type="Node" parent="." groups=["ProjectileManager"]]
+script = ExtResource("6_hxhys")
+projectile_paths = Array[String](["res://Projectiles/Damage/Bullet/damage_bullet.tscn"])
+metadata/_custom_type_script = "uid://bwo8do2giwflp"
+
+[node name="NoWeaponsPolice" parent="." instance=ExtResource("7_hxhys")]
+position = Vector2(-548, -259)
+
+[node name="ShotgunPolice" parent="." instance=ExtResource("8_y0opt")]
+position = Vector2(-307, -747)
+
+[node name="PistolPolice" parent="." instance=ExtResource("9_gpqib")]
+position = Vector2(-818, -526)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

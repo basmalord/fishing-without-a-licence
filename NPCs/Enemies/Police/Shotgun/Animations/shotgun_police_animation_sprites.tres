@@ -1,0 +1,95 @@
+[gd_resource type="SpriteFrames" load_steps=21 format=3 uid="uid://o47fj28wl0jr"]
+
+[ext_resource type="Texture2D" uid="uid://cqgujfellghgq" path="res://NPCs/Enemies/Police/NoWeapons/Animations/Idle/Police Capture0001.png" id="1_lk1e5"]
+[ext_resource type="Texture2D" uid="uid://dx8netmhgai0a" path="res://NPCs/Enemies/Police/NoWeapons/Animations/Idle/Police Capture0002.png" id="2_jk4p8"]
+[ext_resource type="Texture2D" uid="uid://xxsn0tol0xgf" path="res://NPCs/Enemies/Police/NoWeapons/Animations/Idle/Police Capture0003.png" id="3_mmudh"]
+[ext_resource type="Texture2D" uid="uid://cwgng5tw1ui5n" path="res://NPCs/Enemies/Police/NoWeapons/Animations/Idle/Police Capture0004.png" id="4_vuda7"]
+[ext_resource type="Texture2D" uid="uid://befvgnlxhuxof" path="res://NPCs/Enemies/Police/NoWeapons/Animations/Idle/Police Capture0005.png" id="5_kpxcx"]
+[ext_resource type="Texture2D" uid="uid://cmhefdgdrxt2d" path="res://NPCs/Enemies/Police/NoWeapons/Animations/Idle/Police Capture0006.png" id="6_qrw8u"]
+[ext_resource type="Texture2D" uid="uid://sg2w4r0vojgq" path="res://NPCs/Enemies/Police/NoWeapons/Animations/Idle/Police Capture0007.png" id="7_vkiky"]
+[ext_resource type="Texture2D" uid="uid://fp1wg3at3ho3" path="res://NPCs/Enemies/Police/NoWeapons/Animations/Idle/Police Capture0008.png" id="8_4bdx5"]
+[ext_resource type="Texture2D" uid="uid://c6j8w0bg7gq3h" path="res://NPCs/Enemies/Police/NoWeapons/Animations/Idle/Police Capture0009.png" id="9_evp4e"]
+[ext_resource type="Texture2D" uid="uid://ck5kmiluf3uuw" path="res://NPCs/Enemies/Police/NoWeapons/Animations/Idle/Police Capture0010.png" id="10_22n7n"]
+[ext_resource type="Texture2D" uid="uid://ctlawacocmpld" path="res://NPCs/Enemies/Police/Shotgun/Animations/Move/frame0000.png" id="11_aph88"]
+[ext_resource type="Texture2D" uid="uid://b36rpoehlgvh3" path="res://NPCs/Enemies/Police/Shotgun/Animations/Move/frame0001.png" id="12_ylod2"]
+[ext_resource type="Texture2D" uid="uid://bea7ff17bxs7w" path="res://NPCs/Enemies/Police/Shotgun/Animations/Move/frame0002.png" id="13_bnfwd"]
+[ext_resource type="Texture2D" uid="uid://dl8jfybvtn5x0" path="res://NPCs/Enemies/Police/Shotgun/Animations/Move/frame0003.png" id="14_ien1f"]
+[ext_resource type="Texture2D" uid="uid://26na1lk1c5tc" path="res://NPCs/Enemies/Police/Shotgun/Animations/Move/frame0004.png" id="15_q2t8e"]
+[ext_resource type="Texture2D" uid="uid://cb25krx2xd814" path="res://NPCs/Enemies/Police/Shotgun/Animations/Move/frame0005.png" id="16_mcfwk"]
+[ext_resource type="Texture2D" uid="uid://cqcinc6rmriwx" path="res://NPCs/Enemies/Police/Shotgun/Animations/Move/frame0006.png" id="17_fycan"]
+[ext_resource type="Texture2D" uid="uid://cs628ckv1vn8v" path="res://NPCs/Enemies/Police/Shotgun/Animations/Move/frame0007.png" id="18_iiqsc"]
+[ext_resource type="Texture2D" uid="uid://bvbb3aqa0m2bl" path="res://NPCs/Enemies/Police/Shotgun/Animations/Move/frame0008.png" id="19_pgjp0"]
+[ext_resource type="Texture2D" uid="uid://cv0kth05522lk" path="res://NPCs/Enemies/Police/Shotgun/Animations/Move/frame0009.png" id="20_b3big"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lk1e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jk4p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mmudh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vuda7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kpxcx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qrw8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vkiky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4bdx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_evp4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_22n7n")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_aph88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ylod2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_bnfwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ien1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_q2t8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_mcfwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_fycan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_iiqsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_pgjp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_b3big")
+}],
+"loop": true,
+"name": &"MoveTowardCamera",
+"speed": 5.0
+}]

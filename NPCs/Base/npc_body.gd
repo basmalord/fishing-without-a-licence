@@ -4,6 +4,7 @@ class_name NPC
 
 var npc_animation_sprite: AnimatedSprite2D
 var npc_box: CollisionShape2D
+var projectile_manager: ProjectileManager
 
 @export var speed: int
 @export var sprite_frames: SpriteFrames
@@ -20,6 +21,10 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	npc_move()
 	move_and_slide()
+
+func set_projectile_manager():
+	if get_tree().get_first_node_in_group("ProjectileManager") != null:
+		projectile_manager = get_tree().get_first_node_in_group("ProjectileManager")
 
 func get_player_position():
 	var player

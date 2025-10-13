@@ -5,7 +5,7 @@ extends Area2D
 
 func _on_player_entered(body: Node2D) -> void:
 	if body is not Player:
-		pass
+		return
 	var player = body
 	player.is_inside_fishing_area = true
 	player.set_water_direction(direction_of_water)
@@ -13,6 +13,6 @@ func _on_player_entered(body: Node2D) -> void:
 
 func _on_player_exited(body: Node2D) -> void:
 	if body is not Player:
-		pass
+		return
 	var player = body
 	player.is_inside_fishing_area = false

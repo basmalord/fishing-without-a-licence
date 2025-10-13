@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dac2w1k6x774s"]
+
+[ext_resource type="Script" uid="uid://52b5n35d0m2i" path="res://Admin/visual_effect_handler.gd" id="1_igayo"]
+
+[node name="VisualEffectHandler" type="Node"]
+script = ExtResource("1_igayo")

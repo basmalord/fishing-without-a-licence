@@ -3,7 +3,8 @@ extends Area2D
 class_name Effect
 
 func _ready():
-	generate_collision_box()
+	if get_children().size() == 1:
+		generate_collision_box()
 	connect_body_entered_signal()
 
 func _on_player_entered(body: Node2D) -> void:
@@ -11,6 +12,7 @@ func _on_player_entered(body: Node2D) -> void:
 		print("Non-player body enetered")
 		pass
 	else:
+		print("Player Entered")
 		effect(body)
 
 func effect(player: Player):

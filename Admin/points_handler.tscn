@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6im5l1bx808w"]
+
+[ext_resource type="Script" uid="uid://dy22qenlq4qgx" path="res://Admin/points_handler.gd" id="1_dv1pg"]
+
+[node name="PointsHandler" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dv1pg")
+
+[node name="PointsLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 40.0
+theme_override_font_sizes/normal_font_size = 16
+fit_content = true

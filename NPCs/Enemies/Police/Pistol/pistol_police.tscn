@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://dw547a0evqmd1"]
+
+[ext_resource type="Script" uid="uid://c6x24rqeholqo" path="res://NPCs/Enemies/Police/Pistol/pistol_police.gd" id="1_mhtxt"]
+[ext_resource type="SpriteFrames" uid="uid://dmpw38rrujhkp" path="res://NPCs/Enemies/Police/Pistol/Animations/pistol_police.tres" id="2_4cqwn"]
+[ext_resource type="PackedScene" uid="uid://cf8swnouy1k8g" path="res://NPCs/Enemies/base/alert_area.tscn" id="2_mhtxt"]
+[ext_resource type="PackedScene" uid="uid://bjj4wu8tajao3" path="res://NPCs/Enemies/base/enemy_state_machine.tscn" id="3_4cqwn"]
+[ext_resource type="PackedScene" uid="uid://pymcmg04k0ua" path="res://NPCs/Enemies/base/combat_ai_manager.tscn" id="5_jsag6"]
+
+[node name="PistolPolice" type="CharacterBody2D"]
+script = ExtResource("1_mhtxt")
+projectile_type = "Damage Bullet"
+speed = 75
+sprite_frames = ExtResource("2_4cqwn")
+npc_name = "Pistol Police"
+npc_type = "Enemy"
+metadata/_custom_type_script = "uid://c5sn5pur5mwh5"
+
+[node name="AlertArea" parent="." instance=ExtResource("2_mhtxt")]
+enemy_alert_area_size = 40.0
+
+[node name="EnemyStateMachine" parent="." instance=ExtResource("3_4cqwn")]
+
+[node name="CombatAiManager" parent="." instance=ExtResource("5_jsag6")]
