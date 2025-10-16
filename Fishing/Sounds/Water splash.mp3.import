@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://brn6mx30xaan4"
+path="res://.godot/imported/Water splash.mp3-b7571877abf77165568ab5922f75abaf.mp3str"
+
+[deps]
+
+source_file="res://Fishing/Sounds/Water splash.mp3"
+dest_files=["res://.godot/imported/Water splash.mp3-b7571877abf77165568ab5922f75abaf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

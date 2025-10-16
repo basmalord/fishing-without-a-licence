@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://brttx7e543uos"]
+
+[ext_resource type="PackedScene" uid="uid://2n2jitceoykg" path="res://Fishing/Area/fishing_area.tscn" id="1_3o3ip"]
+[ext_resource type="SpriteFrames" uid="uid://ck2klfga6hrl8" path="res://Admin/FishPopulater/Animation/fish_marker_animation.tres" id="1_n3olm"]
+[ext_resource type="AudioStream" uid="uid://djg4w2cfk0wpi" path="res://Fishing/Sounds/catch_timer_sound.wav" id="4_xxdsj"]
+[ext_resource type="Script" uid="uid://bblxfwojdfrhm" path="res://Admin/FishPopulater/fish_marker.gd" id="5_p0gqj"]
+[ext_resource type="Script" uid="uid://cr83mjrswk7e0" path="res://Fishing/catch_sprite_audio_stream.gd" id="5_ws2m8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vvoml"]
+size = Vector2(66, 20)
+
+[node name="FishMarker" type="AnimatedSprite2D"]
+sprite_frames = ExtResource("1_n3olm")
+animation = &"FishMarker"
+script = ExtResource("5_p0gqj")
+cast_ticks_median = 6
+
+[node name="FishingArea" parent="." instance=ExtResource("1_3o3ip")]
+
+[node name="FishBox" type="CollisionShape2D" parent="FishingArea"]
+shape = SubResource("RectangleShape2D_vvoml")
+
+[node name="MarkerTimer" type="Timer" parent="."]
+wait_time = 15.0
+
+[node name="CastTimer" type="Timer" parent="."]
+
+[node name="MarkerAudioStreamer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_xxdsj")
+pitch_scale = 2.0
+bus = &"FishTimerSound"
+script = ExtResource("5_ws2m8")
+
+[node name="MarkerAudioTimer" type="Timer" parent="MarkerAudioStreamer"]
+
+[connection signal="timeout" from="MarkerTimer" to="." method="remove_marker"]
+[connection signal="timeout" from="CastTimer" to="." method="on_cast_tick"]

@@ -7,6 +7,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_shpoy")
@@ -30,8 +32,12 @@ offset_bottom = 225.0
 text = "Yes"
 
 [node name="Button2" type="Button" parent="."]
+layout_mode = 0
 offset_left = 723.0
 offset_top = 189.0
 offset_right = 754.0
 offset_bottom = 220.0
 text = "No"
+
+[connection signal="pressed" from="Button" to="." method="_on_yes_pushed"]
+[connection signal="pressed" from="Button2" to="." method="_on_no_pushed"]

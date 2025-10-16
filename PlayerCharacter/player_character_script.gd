@@ -20,7 +20,9 @@ class_name Player
 var is_inside_fishing_area: bool = false
 var is_fishing: bool = false
 var player_direction_of_water: String 
-var fishing_rod_collection: Array[String] = ["Default"]
+var fishing_rod_collection: Array[String] = ["Default", "Red", "Yellow", "Purple"]
+var current_fishing_area: Node2D
+
 
 func _ready():
 	set_rod_type(fishing_rod_type)
@@ -85,6 +87,10 @@ func fishing_input():
 		fishing_rod.hide()
 		fishing_rod.flip_h = false
 		fishing_rod.position = fishing_rod.original_position
+		if is_inside_fishing_area:
+			if is_instance_valid(current_fishing_area) == false:
+				return
+			current_fishing_area.reel()
 	if Input.is_action_pressed("FISH"):
 		if is_inside_fishing_area:
 			if player_direction_of_water != null:
@@ -102,13 +108,20 @@ func fishing_input():
 					fishing_rod.z_index = player_z + 1
 
 
-func set_water_direction(direction_of_water):
+
+func set_water_direction(direction_of_water: String, fishing_area: Node2D):
+	current_fishing_area = fishing_area
 	player_direction_of_water = direction_of_water
+	if is_instance_valid(current_fishing_area):
+		current_fishing_area.cast()
 
 func receive_damage(damage: int):
 	visual_effect_handler.flash_red()
-	if get_tree().get_first_node_in_group("hearts") == null:
+	if get_tree().get_nodes_in_group("hearts").size() == 0:
+		print("KILLER")
+		var death_screen = load("res://UI/Start Screen/death_screen.tscn")
 		get_tree().change_scene_to_file("res://UI/Start Screen/death_screen.tscn")
+		return
 	get_tree().get_first_node_in_group("hearts").queue_free()
 	print("The player took ", damage, " points of damage")
 

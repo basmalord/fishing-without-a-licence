@@ -18,6 +18,7 @@ func _ready():
 	super._ready()
 	instantiate_attack_generator()
 	call_attack_generator_generate_attack()
+	npc_animation_sprite.scale = Vector2(0.5,0.5)
 
 
 

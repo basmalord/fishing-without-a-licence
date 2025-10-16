@@ -8,6 +8,7 @@
 
 [node name="NoWeaponsPolice" type="CharacterBody2D"]
 collision_layer = 2
+collision_mask = 129
 script = ExtResource("1_vbcsh")
 attack_type = "Kill"
 attack_size = Vector2(1, 1)

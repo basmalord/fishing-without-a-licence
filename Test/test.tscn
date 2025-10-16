@@ -23,7 +23,7 @@ position = Vector2(533, -1564)
 texture = ExtResource("2_1ihti")
 
 [node name="PlayerCharacter" parent="." groups=["Player"] instance=ExtResource("1_yfa23")]
-position = Vector2(462, -183)
+position = Vector2(553, -177)
 motion_mode = 1
 
 [node name="ProjectileManager" type="Node" parent="." groups=["ProjectileManager"]]
@@ -372,7 +372,7 @@ scale = Vector2(-9.49848, -1.06461)
 collision_layer = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="barrier15"]
-position = Vector2(-96, 173)
+position = Vector2(-94.1203, 201.013)
 scale = Vector2(10.3977, -51.3914)
 shape = SubResource("RectangleShape2D_wbqg2")
 

@@ -1,28 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dn065u800j1c0"]
+[gd_scene load_steps=7 format=3 uid="uid://dn065u800j1c0"]
 
 [ext_resource type="PackedScene" uid="uid://bolwi253goxct" path="res://NPCs/Base/npc_body.tscn" id="1_quuy1"]
 [ext_resource type="Script" uid="uid://h25gif500xjx" path="res://NPCs/Merchants/merchant_base.gd" id="2_amyuw"]
 [ext_resource type="SpriteFrames" uid="uid://cv4r2agfefima" path="res://NPCs/Merchants/Animation Textures/merchant_sprite_frames.tres" id="3_ibbyf"]
 [ext_resource type="Texture2D" uid="uid://b0a631njlibxn" path="res://Fishing/Textures/Items/Rod2.png" id="4_ibbyf"]
 [ext_resource type="PackedScene" uid="uid://d3yu5apurveji" path="res://NPCs/Merchants/merchant_cost_ui.tscn" id="5_bjung"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_amyuw"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"Purple Merchant",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"Red Merchant",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"Yellow Merchant",
-"speed": 5.0
-}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_amyuw"]
 
@@ -39,7 +21,7 @@ cost = {
 sprite_frames = ExtResource("3_ibbyf")
 
 [node name="NPCAnimatedSprite" parent="." index="1"]
-sprite_frames = SubResource("SpriteFrames_amyuw")
+sprite_frames = ExtResource("3_ibbyf")
 animation = &"Purple Merchant"
 
 [node name="MerchantRodSprite" type="Sprite2D" parent="." index="2"]

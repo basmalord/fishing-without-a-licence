@@ -1,0 +1,38 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cheso0pl2rrld"]
+
+[ext_resource type="Texture2D" uid="uid://cr7hl4patou1u" path="res://Environment/Textures/newnewmap.png" id="2_spfxc"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vfy08"]
+texture = ExtResource("2_spfxc")
+texture_region_size = Vector2i(80, 80)
+5:3/0 = 0
+6:3/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+2:6/0/physics_layer_1/polygon_0/points = PackedVector2Array(-26.6667, -13.3333, 26.6667, -13.3333, 26.6667, -26.6667, -26.6667, -26.6667)
+2:6/0/custom_data_0 = "Down"
+3:6/0 = 0
+5:6/0 = 0
+5:6/0/physics_layer_1/polygon_0/points = PackedVector2Array(13.3333, -26.6667, 13.3333, 26.6667, 26.6667, 26.6667, 26.6667, -26.6667)
+5:6/0/custom_data_0 = "Left"
+6:6/0 = 0
+6:6/0/physics_layer_1/polygon_0/points = PackedVector2Array(-26.6667, -26.6667, -26.6667, 26.6667, -13.3333, 26.6667, -13.3333, -26.6667)
+6:6/0/custom_data_0 = "Right"
+1:7/0 = 0
+2:7/0 = 0
+2:7/0/physics_layer_1/polygon_0/points = PackedVector2Array(-26.6667, 26.6667, -26.6667, 13.3333, 26.6667, 13.3333, 26.6667, 26.6667)
+2:7/0/custom_data_0 = "Up"
+3:7/0 = 0
+
+[resource]
+tile_size = Vector2i(80, 80)
+physics_layer_0/collision_layer = 128
+physics_layer_0/collision_mask = 3
+physics_layer_1/collision_layer = 0
+physics_layer_1/collision_mask = 0
+custom_data_layer_0/name = "fishing_direction"
+custom_data_layer_0/type = 4
+sources/1 = SubResource("TileSetAtlasSource_vfy08")

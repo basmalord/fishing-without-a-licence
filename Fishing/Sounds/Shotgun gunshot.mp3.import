@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://o7siyuvl0rbd"
+path="res://.godot/imported/Shotgun gunshot.mp3-88ae840d905a675ec6efcfa0e8c4dbb1.mp3str"
+
+[deps]
+
+source_file="res://Fishing/Sounds/Shotgun gunshot.mp3"
+dest_files=["res://.godot/imported/Shotgun gunshot.mp3-88ae840d905a675ec6efcfa0e8c4dbb1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

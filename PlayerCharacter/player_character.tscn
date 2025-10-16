@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://b7x8mdqo6a8yh" path="res://Admin/fish_counter.gd" id="9_4q8d5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jijpc"]
+height = 40.0
 
 [node name="PlayerCharacter" type="CharacterBody2D"]
 collision_mask = 255
@@ -23,17 +24,18 @@ fishing_rod_type = "Default"
 
 [node name="Rod" type="Sprite2D" parent="."]
 position = Vector2(-57, -30)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_hh3aq")
 script = ExtResource("5_v77wv")
 
 [node name="PlayerAnimatedSprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
 sprite_frames = ExtResource("2_iqp7p")
 animation = &"FishingUp"
 autoplay = "Idle"
 
 [node name="PlayerBox" type="CollisionShape2D" parent="."]
-position = Vector2(5, -1)
-scale = Vector2(2.30952, 2.30952)
+position = Vector2(2, 3)
 shape = SubResource("CapsuleShape2D_jijpc")
 
 [node name="PlayerCamera" type="Camera2D" parent="."]
