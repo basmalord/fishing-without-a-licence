@@ -12,7 +12,7 @@ var active_fish: String
 
 func _ready():
 	load_fish_sprites(fish)
-	set_random_active_fish()
+	set_active_fish()
 	set_texture_to_active_fish()
 	orientate()
 
@@ -32,6 +32,30 @@ func set_random_active_fish():
 	var randomly_selected_fish_index = randi_range(1, fish.keys().size()) - 1
 	active_fish = fish.keys()[randomly_selected_fish_index]
 	print(active_fish)
+
+func set_active_fish():
+	if fish.keys().size() == 0:
+		return
+	var random_number = randi_range(1,10)
+	var random_flip = randi_range(1,2)
+	match random_number:
+		10:
+			active_fish = "Gold Fish"
+		9, 8:
+			if random_flip == 1:
+				active_fish = "Blue Fish"
+			else:
+				active_fish = "Red Fish"
+		7,6,5:
+			if random_flip == 1:
+				active_fish = "Purple Fish"
+			else:
+				active_fish = "Angled Red Fish"
+		4,3,2,1:
+			if random_flip ==1:
+				active_fish = "Teal Fish"
+			else:
+				active_fish = "Orange Fish"
 
 func set_texture_to_active_fish():
 	var active_fish_path = fish[active_fish]

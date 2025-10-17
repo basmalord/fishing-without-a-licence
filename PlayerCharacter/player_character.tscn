@@ -1,12 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cs837suu5yuex"]
+[gd_scene load_steps=10 format=3 uid="uid://cs837suu5yuex"]
 
 [ext_resource type="Script" uid="uid://c41e3m23ifaa4" path="res://PlayerCharacter/player_character_script.gd" id="1_jnfdi"]
 [ext_resource type="SpriteFrames" uid="uid://bihvdv463phr" path="res://PlayerCharacter/Animation_Sprite_Frames/player_character_sprite_frames.tres" id="2_iqp7p"]
 [ext_resource type="Script" uid="uid://dwfbn3clr6bnq" path="res://Fishing/Handler/fishing_handler.gd" id="3_wo4jc"]
-[ext_resource type="Texture2D" uid="uid://b0a631njlibxn" path="res://Fishing/Textures/Items/Rod2.png" id="4_hh3aq"]
-[ext_resource type="Script" uid="uid://knmjt60w8f8a" path="res://PlayerCharacter/rod.gd" id="5_v77wv"]
 [ext_resource type="PackedScene" uid="uid://c6im5l1bx808w" path="res://Admin/points_handler.tscn" id="6_7pk2q"]
 [ext_resource type="Script" uid="uid://52b5n35d0m2i" path="res://Admin/visual_effect_handler.gd" id="7_7pon7"]
+[ext_resource type="AudioStream" uid="uid://dkxitkbhprubw" path="res://PlayerCharacter/Sounds/Hit sound.mp3" id="8_4q8d5"]
 [ext_resource type="Texture2D" uid="uid://ryoyh2gfg8h2" path="res://PlayerCharacter/Other Textures/Heart.png" id="8_77nnt"]
 [ext_resource type="Script" uid="uid://b7x8mdqo6a8yh" path="res://Admin/fish_counter.gd" id="9_4q8d5"]
 
@@ -22,17 +21,12 @@ speed = 75
 sprint_modifier = 75
 fishing_rod_type = "Default"
 
-[node name="Rod" type="Sprite2D" parent="."]
-position = Vector2(-57, -30)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_hh3aq")
-script = ExtResource("5_v77wv")
-
 [node name="PlayerAnimatedSprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = ExtResource("2_iqp7p")
-animation = &"FishingUp"
-autoplay = "Idle"
+animation = &"FishingUpIdle"
+autoplay = "Default"
+frame_progress = 0.828173
 
 [node name="PlayerBox" type="CollisionShape2D" parent="."]
 position = Vector2(2, 3)
@@ -55,17 +49,27 @@ script = ExtResource("7_7pon7")
 metadata/_custom_type_script = "uid://52b5n35d0m2i"
 
 [node name="Heart1" type="Sprite2D" parent="." groups=["hearts"]]
-position = Vector2(-316, -261)
+position = Vector2(-244, -261)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_77nnt")
 
 [node name="Heart2" type="Sprite2D" parent="." groups=["hearts"]]
-position = Vector2(-406, -261)
+position = Vector2(-321, -261)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_77nnt")
 
 [node name="Heart3" type="Sprite2D" parent="." groups=["hearts"]]
-position = Vector2(-506, -260)
+position = Vector2(-392, -260)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_77nnt")
+
+[node name="Heart4" type="Sprite2D" parent="." groups=["hearts"]]
+position = Vector2(-458, -260)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_77nnt")
+
+[node name="Heart5" type="Sprite2D" parent="." groups=["hearts"]]
+position = Vector2(-527, -260)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_77nnt")
 
@@ -73,8 +77,7 @@ texture = ExtResource("8_77nnt")
 script = ExtResource("9_4q8d5")
 metadata/_custom_type_script = "uid://b7x8mdqo6a8yh"
 
-[node name="UIRod" type="Sprite2D" parent="."]
-position = Vector2(438, -249)
-texture = ExtResource("4_hh3aq")
+[node name="HitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_4q8d5")
 
 [connection signal="animation_looped" from="PlayerAnimatedSprite" to="FishingHandler" method="_on_fishing_animation_looped"]

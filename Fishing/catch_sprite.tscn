@@ -122,10 +122,13 @@ modulate = Color(1, 1, 1, 0)
 texture = SubResource("ImageTexture_nuuwp")
 script = ExtResource("1_nuuwp")
 fish = Dictionary[String, String]({
+"Angled Red Fish": "res://Fishing/Textures/Fish/fish sideways red.png",
 "Blue Fish": "res://Fishing/Textures/Fish/Bluer fish.png",
 "Gold Fish": "res://Fishing/Textures/Fish/Goldfish 16x16.png",
+"Orange Fish": "res://Fishing/Textures/Fish/Orange fish.png",
 "Purple Fish": "res://Fishing/Textures/Fish/fish sideways purple.png",
-"Red Fish": "res://Fishing/Textures/Fish/Red fish.png"
+"Red Fish": "res://Fishing/Textures/Fish/Red fish.png",
+"Teal Fish": "res://Fishing/Textures/Fish/Blue fish.png"
 })
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

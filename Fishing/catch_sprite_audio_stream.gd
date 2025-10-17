@@ -5,11 +5,21 @@ extends AudioStreamPlayer2D
 
 
 var caught_fish_sound_location: String = "res://Fishing/Sounds/caught_fish_sound.wav"
+var splash_sound_location: String = "res://Fishing/Sounds/Water splash.mp3"
 
 var caught_fish_sound: AudioStream = null
+var splash_sound: AudioStream = null
+
 
 func _ready():
 	caught_fish_sound = load(caught_fish_sound_location)
+	splash_sound = load(splash_sound_location)
+
+func play_splash_sound():
+	if splash_sound:
+		stream = splash_sound
+		play()
+		stream = null
 
 func play_caught_fish_sound():
 	if caught_fish_sound:

@@ -10,17 +10,15 @@ func point_player(direction_name: String):
 			if player.player_animation_sprite.flip_h == true:
 				player.player_animation_sprite.flip_h = false
 			player.player_animation_sprite.animation = "FishingSideways"
-			if player.player_animation_sprite.frame == 8: 
-				player.points_handler.add_points()
-				player.player_animation_sprite.frame = 4
+			#if player.player_animation_sprite.frame == 9: 
+				#player.points_handler.add_points()
+				#player.player_animation_sprite.frame = 5
 		"Right":
 			player.player_animation_sprite.animation = "FishingSideways"
 			player.player_animation_sprite.flip_h = true
-			if player.player_animation_sprite.frame == 8: 
-				player.points_handler.add_points() #points added here on sideways fishing because the animation doesn't fully loop, best to change animation rather than code
-				player.player_animation_sprite.frame = 4
-			player.fishing_rod.flip_h = true
-			player.fishing_rod.position = player.fishing_rod.flipped_position 
+			#if player.player_animation_sprite.frame == 9: 
+				#player.points_handler.add_points() #points added here on sideways fishing because the animation doesn't fully loop, best to change animation rather than code
+				#player.player_animation_sprite.frame = 5
 		"Up":
 			if player.player_animation_sprite.flip_h == true:
 				player.player_animation_sprite.flip_h = false
@@ -34,16 +32,9 @@ func point_player(direction_name: String):
 
 func _on_fishing_animation_looped() -> void:
 	if player.player_animation_sprite.animation.find("Fishing") != -1:
-		player.points_handler.add_points()
-		var fish_type: String
-		var rod_type = player.fishing_rod_type
-		match rod_type:
-			"Default":
-				fish_type = "Blue Fish"
-			"Red":
-				fish_type = "Red Fish"
-			"Purple":
-				fish_type = "Purple Fish"
-			"Yellow":
-				fish_type = "Yellow Fish"
-		player.fish_counter.add_fish(fish_type, 1)
+		if player.player_animation_sprite.animation == "FishingDown":
+			player.player_animation_sprite.animation = "FishingDownIdle"
+		elif player.player_animation_sprite.animation == "FishingUp":
+			player.player_animation_sprite.animation = "FishingUpIdle"
+		elif player.player_animation_sprite.animation == "FishingSideways":
+			player.player_animation_sprite.animation = "FishingSidewaysIdle"

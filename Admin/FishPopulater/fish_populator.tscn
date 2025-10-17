@@ -4,3 +4,5 @@
 
 [node name="FishPopulator" type="Node"]
 script = ExtResource("1_2uvg7")
+
+[connection signal="child_exiting_tree" from="." to="." method="_on_marker_exiting_tree"]
