@@ -11,20 +11,12 @@ config_version=5
 [application]
 
 config/name="Fishing Without A Licence"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [audio]
 
 buses/default_bus_layout="uid://bo7xf3ssv716b"
-
-[global_group]
-
-Map=""
-Player=""
-ProjectileManager=""
-LevelManager=""
-LevelPointsTracker=""
 
 [input]
 
@@ -99,5 +91,3 @@ FISH={
 2d_physics/layer_6="EnemyAlertAreas"
 2d_physics/layer_7="MerchantAreas"
 2d_physics/layer_8="barrier"
-2d_physics/layer_9="Dogs"
-2d_physics/layer_13="KnockBackAreas"

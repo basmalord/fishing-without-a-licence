@@ -76,7 +76,7 @@ func load_fish_markers():
 		new_marker.fishing_area.direction_of_water = water_direction
 		tiles_with_markers.append(new_marker.global_position)
 		excluded_cells.append(new_marker.global_position)
-
+		print("excluded cells: ",excluded_cells, "new_marker position: ", new_marker.global_position)
 
 
 func exclude_cell(node: Node2D):

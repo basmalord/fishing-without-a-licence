@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" uid="uid://bwo8do2giwflp" path="res://Admin/projectile_manager.gd" id="1_8mvbo"]
 
-[node name="ProjectileManager" type="Node" groups=["ProjectileManager"]]
+[node name="ProjectileManager" type="Node"]
 script = ExtResource("1_8mvbo")

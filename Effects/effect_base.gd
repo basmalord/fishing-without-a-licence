@@ -2,8 +2,6 @@ extends Area2D
 
 class_name Effect
 
-var my_box
-
 func _ready():
 	if get_children().size() == 1:
 		generate_collision_box()
@@ -25,7 +23,6 @@ func generate_collision_box():
 	var new_shape = CircleShape2D.new()
 	add_child(new_box)
 	new_box.shape = new_shape
-	my_box = new_box
 
 func connect_body_entered_signal():
 	connect("body_entered", Callable(self, "_on_player_entered"))
