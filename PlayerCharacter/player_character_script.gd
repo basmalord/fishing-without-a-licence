@@ -9,6 +9,9 @@ class_name Player
 @onready var visual_effect_handler = $VisualEffectHandler
 @onready var fish_counter = $FishCounter
 @onready var hit_sound = $HitSound
+@onready var hearts: Array[Sprite2D] = [$Heart1, $Heart2, $Heart3, $Heart4, $Heart5]
+
+#@onready var attack_rod = $AttackRod
 
 
 @export var speed: int
@@ -22,23 +25,47 @@ var player_direction_of_water: String
 var fishing_rod_collection: Array[String] = ["Default", "Red", "Yellow", "Purple"]
 var current_fishing_area: Node2D
 var is_dead = false
+var last_heart_position
+var attack_rod_original_position: Vector2
+var is_attacking: bool = false
+var is_invincible: bool = false
 const DeathScene = preload("res://Admin/death_cam.tscn")
 
 func _ready():
 	pass
+	#attack_rod_original_position = attack_rod.global_position
+	#attack_rod.global_position.y = attack_rod_original_position.y - 50
+	#attack_rod.hide()
+	#attack_rod.set_process(false)
+	#attack_rod.set_physics_process(false)
 
 
 func _physics_process(delta: float) -> void:
 	if !is_dead:
-		fishing_input()
-		if is_fishing == false:
-			player_move()
-			select_animation()
-			move_and_slide()
-			if Input.is_action_just_pressed("SHOW FISH"):
-				print(fish_counter.fish)
+		if !is_invincible:
+			fishing_input()
+			if is_fishing == false:
+				player_move()
+				select_animation()
+				move_and_slide()
+				#if Input.is_action_just_pressed("ROD SLOT 1"):
+					#if !is_attacking:
+						#attack_rod.set_process(true)
+						#attack_rod.set_physics_process(true)
+						#attack_rod.show()
+						#attack_rod.animation_player.play()
+						#set_is_attacking()
+				if Input.is_action_just_pressed("SHOW FISH"):
+					print(fish_counter.fish)
 
-
+func set_is_attacking():
+	pass
+	#is_attacking = true
+	#await get_tree().create_timer(0.4).timeout #has to be roughly the same amount of time as the animation
+	#attack_rod.hide()
+	#attack_rod.set_process(false)
+	#attack_rod.set_physics_process(false)
+	#is_attacking = false
 
 func _input(event: InputEvent) -> void:
 	pass
@@ -113,8 +140,10 @@ func receive_damage(damage: int):
 			is_dead = true
 			get_parent().set_enemies_to_idle()
 			return
-		get_tree().get_first_node_in_group("hearts").queue_free()
-		print("The player took ", damage, " points of damage")
+		var heart_to_destroy = hearts[0]
+		last_heart_position = heart_to_destroy.position
+		hearts.erase(heart_to_destroy)
+		heart_to_destroy.queue_free()
 
 func end_screen():
 	var end_screen = "res://UI/Start Screen/death_screen.tscn"
@@ -122,6 +151,16 @@ func end_screen():
 
 func add_rod(rod_type: String):
 	fishing_rod_collection.append(rod_type)
+
+func receive_health():
+	if get_tree().get_nodes_in_group("hearts").size() < 5:
+		print("before: ", get_tree().get_nodes_in_group("hearts"))
+		var heart = get_tree().get_first_node_in_group("hearts")
+		var new_heart = heart.duplicate()
+		add_child(new_heart)
+		new_heart.position = last_heart_position
+		hearts.insert(0, new_heart)
+		print("after: ",get_tree().get_nodes_in_group("hearts").size())
 
 #func rod_select():
 	#if Input.is_action_just_pressed("ROD SLOT 1"):

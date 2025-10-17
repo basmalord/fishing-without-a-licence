@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://doewmf1br2mpp"]
+
+[ext_resource type="PackedScene" uid="uid://bolwi253goxct" path="res://NPCs/Base/npc_body.tscn" id="1_847ao"]
+[ext_resource type="SpriteFrames" uid="uid://dwr4b1lwt6xig" path="res://NPCs/Dog/Animation/do_sprite_frames.tres" id="2_akq01"]
+[ext_resource type="Script" uid="uid://4gr1xg3mpg7y" path="res://NPCs/Dog/dog.gd" id="2_dta4u"]
+[ext_resource type="PackedScene" uid="uid://5253bxbt5q3b" path="res://Effects/Heal/heal_effect.tscn" id="3_dta4u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_akq01"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yfft5"]
+
+[node name="Dog" instance=ExtResource("1_847ao")]
+collision_layer = 256
+collision_mask = 134
+script = ExtResource("2_dta4u")
+speed = 20
+sprite_frames = ExtResource("2_akq01")
+
+[node name="NPCBox" parent="." index="0"]
+shape = SubResource("CircleShape2D_akq01")
+
+[node name="NPCAnimatedSprite" parent="." index="1"]
+animation = &""
+
+[node name="HealEffect" parent="." index="2" instance=ExtResource("3_dta4u")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealEffect" index="0"]
+scale = Vector2(1.98815, 1.98236)
+shape = SubResource("CircleShape2D_yfft5")
+
+[node name="DogTimer" type="Timer" parent="." index="3"]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="DogTimer" to="." method="dog_set_target_global_position"]

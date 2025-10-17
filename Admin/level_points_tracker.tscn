@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1mxw0hojf0bt"]
+
+[ext_resource type="Script" uid="uid://btxk573787yb2" path="res://Admin/level_points_tracker.gd" id="1_x0gau"]
+[ext_resource type="AudioStream" uid="uid://dy06br07knyr3" path="res://PlayerCharacter/Sounds/Win sound.mp3" id="2_b7vl5"]
+
+[node name="LevelPointsTracker" type="Node" groups=["LevelPointsTracker"]]
+script = ExtResource("1_x0gau")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_b7vl5")

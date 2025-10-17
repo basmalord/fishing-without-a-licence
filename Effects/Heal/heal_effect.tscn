@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://5253bxbt5q3b"]
+
+[ext_resource type="Script" uid="uid://hnuexyyuynhw" path="res://Effects/Heal/heal_effect.gd" id="1_ooxu1"]
+
+[node name="HealEffect" type="Area2D"]
+script = ExtResource("1_ooxu1")
+metadata/_custom_type_script = "uid://bxiaat6tcyban"

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://baosrgoecqsem"]
+
+[ext_resource type="Script" uid="uid://wfgpt00rt27b" path="res://Admin/level_manager.gd" id="1_5w6hf"]
+
+[node name="LevelManager" type="Node" groups=["LevelManager"]]
+script = ExtResource("1_5w6hf")
+levels = Dictionary[String, String]({
+"LevelOne": "res://Test/map_test.tscn",
+"LevelTwo": "res://PlayerCharacter/attack_rod.tscn"
+})

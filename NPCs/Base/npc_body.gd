@@ -5,13 +5,14 @@ class_name NPC
 var npc_animation_sprite: AnimatedSprite2D
 var npc_box: CollisionShape2D
 var projectile_manager: ProjectileManager
+var direction
 
 @export var speed: int
 @export var sprite_frames: SpriteFrames
 @export var npc_name: String
 @export_enum("Enemy", "Non-enemy") var npc_type: String
  
-var target_position: Vector2 = position
+var target_position: Vector2 = global_position
 
 func _ready():
 	initialise_collision_box_and_animated_sprite()
@@ -39,7 +40,7 @@ func get_player_position():
 	return player_position
 
 func npc_move():
-	var direction = (target_position - global_position).normalized()
+	direction = (target_position - global_position).normalized()
 	velocity = direction * speed
 
 func initialise_collision_box_and_animated_sprite():

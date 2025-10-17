@@ -18,6 +18,14 @@ config/icon="res://icon.svg"
 
 buses/default_bus_layout="uid://bo7xf3ssv716b"
 
+[global_group]
+
+Map=""
+Player=""
+ProjectileManager=""
+LevelManager=""
+LevelPointsTracker=""
+
 [input]
 
 MOVE_LEFT={
@@ -91,3 +99,5 @@ FISH={
 2d_physics/layer_6="EnemyAlertAreas"
 2d_physics/layer_7="MerchantAreas"
 2d_physics/layer_8="barrier"
+2d_physics/layer_9="Dogs"
+2d_physics/layer_13="KnockBackAreas"

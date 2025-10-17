@@ -1,0 +1,215 @@
+[gd_resource type="SpriteFrames" load_steps=51 format=3 uid="uid://dwr4b1lwt6xig"]
+
+[ext_resource type="Texture2D" uid="uid://ithsr7dlbyag" path="res://NPCs/Dog/Animation/Dog sitting/frame0000.png" id="1_81cfx"]
+[ext_resource type="Texture2D" uid="uid://gulguyqj6cd6" path="res://NPCs/Dog/Animation/Dog walking/frame0000.png" id="1_mysh6"]
+[ext_resource type="Texture2D" uid="uid://b5fq2h2miexjg" path="res://NPCs/Dog/Animation/Dog sitting/frame0001.png" id="2_7xr73"]
+[ext_resource type="Texture2D" uid="uid://bhdipjg56q627" path="res://NPCs/Dog/Animation/Dog walking/frame0001.png" id="2_135mb"]
+[ext_resource type="Texture2D" uid="uid://b0ndx8m33mqas" path="res://NPCs/Dog/Animation/Dog walking/frame0002.png" id="3_kkpqm"]
+[ext_resource type="Texture2D" uid="uid://bnadsu1f5gf3r" path="res://NPCs/Dog/Animation/Dog sitting/frame0002.png" id="3_ogag8"]
+[ext_resource type="Texture2D" uid="uid://51wf5js4jtg3" path="res://NPCs/Dog/Animation/Dog walking/frame0003.png" id="4_cjmna"]
+[ext_resource type="Texture2D" uid="uid://cfy0jwed7ec7g" path="res://NPCs/Dog/Animation/Dog sitting/frame0003.png" id="4_lt5qc"]
+[ext_resource type="Texture2D" uid="uid://dpxwlabcs5jg5" path="res://NPCs/Dog/Animation/Dog walking/frame0004.png" id="5_h5dnx"]
+[ext_resource type="Texture2D" uid="uid://cq6366uij035m" path="res://NPCs/Dog/Animation/Dog sitting/frame0004.png" id="5_jr11e"]
+[ext_resource type="Texture2D" uid="uid://drs0fu1esnefr" path="res://NPCs/Dog/Animation/Dog walking/frame0005.png" id="6_61rkn"]
+[ext_resource type="Texture2D" uid="uid://cjf3yrxhl1nex" path="res://NPCs/Dog/Animation/Dog sitting/frame0005.png" id="6_jei7i"]
+[ext_resource type="Texture2D" uid="uid://vv07jfp8qopa" path="res://NPCs/Dog/Animation/Dog walking/frame0006.png" id="7_5ebbd"]
+[ext_resource type="Texture2D" uid="uid://bn5qrtqkt0lmg" path="res://NPCs/Dog/Animation/Dog sitting/frame0006.png" id="7_n40rw"]
+[ext_resource type="Texture2D" uid="uid://blyqpwp5c3ldk" path="res://NPCs/Dog/Animation/Dog sitting/frame0007.png" id="8_2sw4i"]
+[ext_resource type="Texture2D" uid="uid://wjvov6fytnbo" path="res://NPCs/Dog/Animation/Dog walking/frame0007.png" id="8_bksnt"]
+[ext_resource type="Texture2D" uid="uid://c1redhlokxcra" path="res://NPCs/Dog/Animation/Dog sitting/frame0008.png" id="9_o221g"]
+[ext_resource type="Texture2D" uid="uid://cp0vg2iw8i81a" path="res://NPCs/Dog/Animation/Dog walking/frame0008.png" id="9_olaan"]
+[ext_resource type="Texture2D" uid="uid://bdgpqxn66lbhl" path="res://NPCs/Dog/Animation/Dog sitting/frame0009.png" id="10_1abdn"]
+[ext_resource type="Texture2D" uid="uid://sad7nekkccj" path="res://NPCs/Dog/Animation/Dog walking/frame0009.png" id="10_hib80"]
+[ext_resource type="Texture2D" uid="uid://dxcoal4oopqgr" path="res://NPCs/Dog/Animation/Dog walking/frame0010.png" id="11_ithh5"]
+[ext_resource type="Texture2D" uid="uid://cng3xog2x5x3q" path="res://NPCs/Dog/Animation/Dog sitting/frame0010.png" id="11_jo41w"]
+[ext_resource type="Texture2D" uid="uid://b5337jydrsim1" path="res://NPCs/Dog/Animation/Dog walking/frame0011.png" id="12_g0g0w"]
+[ext_resource type="Texture2D" uid="uid://brxtpk0f6rb63" path="res://NPCs/Dog/Animation/Dog sitting/frame0011.png" id="12_nfyt2"]
+[ext_resource type="Texture2D" uid="uid://e2u2xenmob7" path="res://NPCs/Dog/Animation/Dog walking/frame0012.png" id="13_8ox4h"]
+[ext_resource type="Texture2D" uid="uid://b4d5kccyj8ya4" path="res://NPCs/Dog/Animation/Dog sitting/frame0012.png" id="13_62d3n"]
+[ext_resource type="Texture2D" uid="uid://bp8bkhty1gflp" path="res://NPCs/Dog/Animation/Dog sitting/frame0013.png" id="14_2hwix"]
+[ext_resource type="Texture2D" uid="uid://dj4m7px370d5g" path="res://NPCs/Dog/Animation/Dog walking/frame0013.png" id="14_xuhfx"]
+[ext_resource type="Texture2D" uid="uid://dr30h8r8nhwcg" path="res://NPCs/Dog/Animation/Dog walking/frame0014.png" id="15_hh621"]
+[ext_resource type="Texture2D" uid="uid://d0087xjmd04s5" path="res://NPCs/Dog/Animation/Dog sitting/frame0014.png" id="15_myon0"]
+[ext_resource type="Texture2D" uid="uid://dcsa4xntpm2de" path="res://NPCs/Dog/Animation/Dog sitting/frame0015.png" id="16_o34vu"]
+[ext_resource type="Texture2D" uid="uid://mcm0i32oq7x2" path="res://NPCs/Dog/Animation/Dog walking/frame0015.png" id="16_ohpcb"]
+[ext_resource type="Texture2D" uid="uid://d2gt76nsel7q5" path="res://NPCs/Dog/Animation/Dog sitting/frame0016.png" id="17_82gwi"]
+[ext_resource type="Texture2D" uid="uid://bjc0r652cont4" path="res://NPCs/Dog/Animation/Dog walking/frame0016.png" id="17_qg5gw"]
+[ext_resource type="Texture2D" uid="uid://bfp6w8vl0wvwh" path="res://NPCs/Dog/Animation/Dog walking/frame0017.png" id="18_jhu6l"]
+[ext_resource type="Texture2D" uid="uid://8msqwa23jnhp" path="res://NPCs/Dog/Animation/Dog sitting/frame0017.png" id="18_msmdx"]
+[ext_resource type="Texture2D" uid="uid://corlj1y5e2wbl" path="res://NPCs/Dog/Animation/Dog sitting/frame0018.png" id="19_2ut07"]
+[ext_resource type="Texture2D" uid="uid://tpjndnt4uby3" path="res://NPCs/Dog/Animation/Dog walking/frame0018.png" id="19_cmysm"]
+[ext_resource type="Texture2D" uid="uid://b0pjt8l5tld4i" path="res://NPCs/Dog/Animation/Dog sitting/frame0019.png" id="20_i4t5a"]
+[ext_resource type="Texture2D" uid="uid://bgm7mn3m42xgt" path="res://NPCs/Dog/Animation/Dog walking/frame0019.png" id="20_kpco2"]
+[ext_resource type="Texture2D" uid="uid://dq4bma254k1jc" path="res://NPCs/Dog/Animation/Dog walking/frame0020.png" id="21_1ubl0"]
+[ext_resource type="Texture2D" uid="uid://bmnu7bef1d20u" path="res://NPCs/Dog/Animation/Dog sitting/frame0020.png" id="21_ms24j"]
+[ext_resource type="Texture2D" uid="uid://trt7jagdnq48" path="res://NPCs/Dog/Animation/Dog sitting/frame0021.png" id="22_7vrdi"]
+[ext_resource type="Texture2D" uid="uid://ddf68k7ifln8i" path="res://NPCs/Dog/Animation/Dog walking/frame0021.png" id="22_u112v"]
+[ext_resource type="Texture2D" uid="uid://bwt2rs25bfm4r" path="res://NPCs/Dog/Animation/Dog sitting/frame0022.png" id="23_hsyuj"]
+[ext_resource type="Texture2D" uid="uid://dwyuvw4e2cuo7" path="res://NPCs/Dog/Animation/Dog walking/frame0022.png" id="23_ul0ti"]
+[ext_resource type="Texture2D" uid="uid://b5u5w0rq5qfbf" path="res://NPCs/Dog/Animation/Dog sitting/frame0023.png" id="24_aftog"]
+[ext_resource type="Texture2D" uid="uid://bof5e2p6lslv4" path="res://NPCs/Dog/Animation/Dog walking/frame0023.png" id="24_n4gn6"]
+[ext_resource type="Texture2D" uid="uid://c4bw3b6bkxxmi" path="res://NPCs/Dog/Animation/Dog sitting/frame0024.png" id="25_eha5i"]
+[ext_resource type="Texture2D" uid="uid://kdsfl3hthyns" path="res://NPCs/Dog/Animation/Dog walking/frame0024.png" id="25_pbop7"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_81cfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7xr73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ogag8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lt5qc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jr11e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jei7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_n40rw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2sw4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_o221g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1abdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_jo41w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nfyt2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_62d3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2hwix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_myon0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_o34vu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_82gwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_msmdx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_2ut07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_i4t5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ms24j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_7vrdi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_hsyuj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_aftog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_eha5i")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mysh6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_135mb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kkpqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cjmna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_h5dnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_61rkn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5ebbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bksnt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_olaan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hib80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ithh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_g0g0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8ox4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_xuhfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_hh621")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ohpcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_qg5gw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_jhu6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_cmysm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_kpco2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1ubl0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_u112v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ul0ti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_n4gn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_pbop7")
+}],
+"loop": true,
+"name": &"Move",
+"speed": 5.0
+}]

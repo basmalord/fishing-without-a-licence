@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://hjlwvdsly4a1"]
+
+[ext_resource type="PackedScene" uid="uid://5h62jqyneteb" path="res://Effects/effect_base.tscn" id="1_ykim4"]
+[ext_resource type="Script" uid="uid://b8dp4dl3nbv4m" path="res://Effects/Knock Back/knock_back.gd" id="2_yfdnw"]
+
+[node name="KnockBack" instance=ExtResource("1_ykim4")]
+collision_layer = 4096
+collision_mask = 2
+script = ExtResource("2_yfdnw")
