@@ -5,6 +5,10 @@
 [node name="LevelManager" type="Node" groups=["LevelManager"]]
 script = ExtResource("1_5w6hf")
 levels = Dictionary[String, String]({
-"LevelOne": "res://Test/map_test.tscn",
-"LevelTwo": "res://PlayerCharacter/attack_rod.tscn"
+"LevelFour": "res://Level_SmallMap/Level_4_SmallMap.tscn",
+"LevelOne": "res://Level_SmallMap/Level_1_SmallMap.tscn",
+"LevelSix": "res://Level_SmallMap/Level_6_SmallMap.tscn",
+"LevelThree": "res://Level_SmallMap/Level_3_SmallMap.tscn",
+"LevelTwo": "res://Level_SmallMap/Level_2_SmallMap.tscn",
+"WinScreen": "res://Admin/win_screen.tscn"
 })

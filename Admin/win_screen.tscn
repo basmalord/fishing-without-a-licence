@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw3gvuiiq7ar6"]
+
+[ext_resource type="Script" uid="uid://8og5h1rp86hq" path="res://win_screen.gd" id="1_0wyli"]
+[ext_resource type="AudioStream" uid="uid://dg2igll2nqxd4" path="res://Music/8bit audio track w harmonies.mp3" id="2_65vcv"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0wyli")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 191.0
+offset_right = 950.0
+offset_bottom = 374.0
+text = "Congratulations, you won!!"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 331.0
+offset_right = 525.0
+offset_bottom = 362.0
+text = "Quit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_65vcv")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

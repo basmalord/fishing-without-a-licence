@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dg2igll2nqxd4"
+path="res://.godot/imported/8bit audio track w harmonies.mp3-7c9eace817cab8c0e40c64bea505ee70.mp3str"
+
+[deps]
+
+source_file="res://Music/8bit audio track w harmonies.mp3"
+dest_files=["res://.godot/imported/8bit audio track w harmonies.mp3-7c9eace817cab8c0e40c64bea505ee70.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

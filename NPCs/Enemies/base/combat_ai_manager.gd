@@ -42,12 +42,14 @@ func set_timer():
 		"No Weapons Police":
 			projectile_timer.stop()
 		"Pistol Police":
-			projectile_timer.wait_time = 0.7
+			projectile_timer.wait_time = 1.5
 		"Shotgun Police":
-			projectile_timer.wait_time = 2
+			projectile_timer.wait_time = 3
 
 func connect_timer_ended_signal_to_projectile():
+	print("signal connected")
 	projectile_timer.connect("timeout", Callable(my_enemy, "instantiate_projectile"))
 
 func disconnect_timer_ended_signal():
-	projectile_timer.disconnect("timeout", Callable(my_enemy, "instantiate_projectile"))
+	if projectile_timer.is_connected("timeout", Callable(my_enemy, "instantiate_projectile")):
+		projectile_timer.disconnect("timeout", Callable(my_enemy, "instantiate_projectile"))

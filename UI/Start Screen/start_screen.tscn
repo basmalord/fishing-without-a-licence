@@ -18,14 +18,19 @@ offset_top = 49.0
 offset_right = 1085.0
 offset_bottom = 549.0
 theme_override_font_sizes/normal_font_size = 25
-text = "Welcome to Fishing Without Licence! You play as Joe, a man who loves to fish, but hates licences of all kinds- especially those pertaining to fishing! He's found himself in trouble with the law again after fishing at his local park. Collect as many fish as you can before the police stop you- and try and unlock all the rods!"
+text = "Welcome to Fishing Without Licence! You play as Joe, a man who loves to fish, but hates licences of all kinds- especially those pertaining to fishing! He's found himself in trouble with the law again after fishing at his local park. Collect enough fish before you're caught by the police to advance to the next level!
+
+Controls: 
+WASD for movement
+Hold 'E' to cast
+Release 'E' to reel when you hear the indicator!"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 539.0
-offset_top = 337.0
-offset_right = 596.0
-offset_bottom = 368.0
+offset_left = 535.0
+offset_top = 421.0
+offset_right = 592.0
+offset_bottom = 452.0
 text = "BEGIN"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

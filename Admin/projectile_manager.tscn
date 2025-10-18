@@ -4,3 +4,4 @@
 
 [node name="ProjectileManager" type="Node" groups=["ProjectileManager"]]
 script = ExtResource("1_8mvbo")
+projectile_paths = Array[String](["res://Projectiles/Damage/Bullet/damage_bullet.tscn"])

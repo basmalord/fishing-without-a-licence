@@ -55,7 +55,7 @@ func load_all_fish_markers():
 		new_marker.fishing_area.direction_of_water = water_direction
 
 func load_fish_markers():
-	if get_child_count() >= 10:
+	if get_child_count() >= max_fish_markers:
 		return
 	var fish_markers_to_load = max_fish_markers - get_child_count()
 	for n in fish_markers_to_load:
@@ -76,6 +76,7 @@ func load_fish_markers():
 		new_marker.fishing_area.direction_of_water = water_direction
 		tiles_with_markers.append(new_marker.global_position)
 		excluded_cells.append(new_marker.global_position)
+		print("new marker gpos: ",new_marker.global_position, "excluded cells: ", excluded_cells, "cells with markers: ", tiles_with_markers)
 
 
 

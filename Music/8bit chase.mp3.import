@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dytl1k2k7mcav"
+path="res://.godot/imported/8bit chase.mp3-dd7e5d748d9dfcb323e626a0c3a995b1.mp3str"
+
+[deps]
+
+source_file="res://Music/8bit chase.mp3"
+dest_files=["res://.godot/imported/8bit chase.mp3-dd7e5d748d9dfcb323e626a0c3a995b1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

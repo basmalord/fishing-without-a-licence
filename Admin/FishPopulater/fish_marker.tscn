@@ -16,6 +16,7 @@ script = ExtResource("5_p0gqj")
 cast_ticks_median = 6
 
 [node name="FishingArea" parent="." instance=ExtResource("1_3o3ip")]
+scale = Vector2(2.02916, 1)
 
 [node name="FishBox" type="CollisionShape2D" parent="FishingArea"]
 shape = SubResource("RectangleShape2D_vvoml")

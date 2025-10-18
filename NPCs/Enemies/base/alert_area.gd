@@ -13,13 +13,14 @@ func _on_player_entered(body: Node2D):
 	if body is not Player:
 		return
 	if body is Player:
-		print("worked")
+		scale = scale * 1.2
 		my_enemy.state_machine.set_state("Alert")
 
 
 func _on_player_exited(body: Node2D):
 	if body is not Player:
 		return
+	scale = scale / 1.2
 	my_enemy.state_machine.set_state("Idle")
 
 func _ready():

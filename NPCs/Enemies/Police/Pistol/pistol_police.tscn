@@ -7,18 +7,19 @@
 [ext_resource type="PackedScene" uid="uid://pymcmg04k0ua" path="res://NPCs/Enemies/base/combat_ai_manager.tscn" id="5_jsag6"]
 
 [node name="PistolPolice" type="CharacterBody2D"]
+scale = Vector2(1.5, 1.5)
 collision_layer = 6
 collision_mask = 135
 script = ExtResource("1_mhtxt")
 projectile_type = "Damage Bullet"
-speed = 75
+speed = 40
 sprite_frames = ExtResource("2_4cqwn")
 npc_name = "Pistol Police"
 npc_type = "Enemy"
 metadata/_custom_type_script = "uid://c5sn5pur5mwh5"
 
 [node name="AlertArea" parent="." instance=ExtResource("2_mhtxt")]
-enemy_alert_area_size = 40.0
+enemy_alert_area_size = 15.0
 
 [node name="EnemyStateMachine" parent="." instance=ExtResource("3_4cqwn")]
 

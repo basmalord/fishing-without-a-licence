@@ -22,7 +22,7 @@ z_index = -6
 position = Vector2(533, -1564)
 texture = ExtResource("2_1ihti")
 
-[node name="PlayerCharacter" parent="." groups=["Player"] instance=ExtResource("1_yfa23")]
+[node name="PlayerCharacter" parent="." instance=ExtResource("1_yfa23")]
 position = Vector2(553, -177)
 motion_mode = 1
 

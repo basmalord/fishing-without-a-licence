@@ -130,20 +130,25 @@ func set_water_direction(direction_of_water: String, fishing_area: Node2D):
 
 func receive_damage(damage: int):
 	if !is_dead:
-		hit_sound.play()
-		visual_effect_handler.flash_red()
-		if get_tree().get_nodes_in_group("hearts").size() == 1:
-			player_animation_sprite.hide()
-			player_box.hide()
-			var my_death_scene = DeathScene.instantiate()
-			add_child(my_death_scene)
-			is_dead = true
-			get_parent().set_enemies_to_idle()
-			return
-		var heart_to_destroy = hearts[0]
-		last_heart_position = heart_to_destroy.position
-		hearts.erase(heart_to_destroy)
-		heart_to_destroy.queue_free()
+		if !is_invincible:
+			hit_sound.play()
+			visual_effect_handler.flash_red()
+			if get_tree().get_nodes_in_group("hearts").size() == 1:
+				var heart_to_destroy = hearts[0]
+				last_heart_position = heart_to_destroy.position
+				hearts.erase(heart_to_destroy)
+				heart_to_destroy.queue_free()
+				player_animation_sprite.hide()
+				player_box.hide()
+				var my_death_scene = DeathScene.instantiate()
+				add_child(my_death_scene)
+				is_dead = true
+				get_parent().set_enemies_to_idle()
+				return
+			var heart_to_destroy = hearts[0]
+			last_heart_position = heart_to_destroy.position
+			hearts.erase(heart_to_destroy)
+			heart_to_destroy.queue_free()
 
 func end_screen():
 	var end_screen = "res://UI/Start Screen/death_screen.tscn"

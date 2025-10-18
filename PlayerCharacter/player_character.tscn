@@ -13,20 +13,20 @@
 height = 40.0
 
 [node name="PlayerCharacter" type="CharacterBody2D" groups=["Player"]]
+scale = Vector2(1.5, 1.5)
 collision_mask = 255
 platform_floor_layers = 4294967040
 platform_wall_layers = 128
 script = ExtResource("1_jnfdi")
-speed = 75
-sprint_modifier = 75
+speed = 100
+sprint_modifier = 100
 fishing_rod_type = "Default"
 
 [node name="PlayerAnimatedSprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = ExtResource("2_iqp7p")
-animation = &"FishingUpIdle"
+animation = &"Default"
 autoplay = "Default"
-frame_progress = 0.828173
 
 [node name="PlayerBox" type="CollisionShape2D" parent="."]
 position = Vector2(2, 3)
@@ -39,37 +39,37 @@ script = ExtResource("3_wo4jc")
 metadata/_custom_type_script = "uid://dwfbn3clr6bnq"
 
 [node name="PointsHandler" parent="." instance=ExtResource("6_7pk2q")]
-offset_left = -19.0
-offset_top = -285.0
-offset_right = -19.0
-offset_bottom = -285.0
+offset_left = 88.6667
+offset_top = -175.333
+offset_right = 88.6667
+offset_bottom = -175.333
 
 [node name="VisualEffectHandler" type="Node" parent="."]
 script = ExtResource("7_7pon7")
 metadata/_custom_type_script = "uid://52b5n35d0m2i"
 
 [node name="Heart1" type="Sprite2D" parent="." groups=["hearts"]]
-position = Vector2(-244, -261)
+position = Vector2(-53, -176)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_77nnt")
 
 [node name="Heart2" type="Sprite2D" parent="." groups=["hearts"]]
-position = Vector2(-321, -261)
+position = Vector2(-130, -176)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_77nnt")
 
 [node name="Heart3" type="Sprite2D" parent="." groups=["hearts"]]
-position = Vector2(-392, -260)
+position = Vector2(-201, -175)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_77nnt")
 
 [node name="Heart4" type="Sprite2D" parent="." groups=["hearts"]]
-position = Vector2(-458, -260)
+position = Vector2(-267, -175)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_77nnt")
 
 [node name="Heart5" type="Sprite2D" parent="." groups=["hearts"]]
-position = Vector2(-527, -260)
+position = Vector2(-336, -175)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_77nnt")
 

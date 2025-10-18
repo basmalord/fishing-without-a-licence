@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bpe511np7htrh" path="res://Admin/projectile_manager.tscn" id="4_xpgvd"]
 [ext_resource type="Script" uid="uid://6534bsjb00qr" path="res://Admin/FishPopulater/fish_populator.gd" id="5_7uwje"]
 [ext_resource type="PackedScene" uid="uid://doewmf1br2mpp" path="res://NPCs/Dog/dog.tscn" id="6_telpd"]
-[ext_resource type="PackedScene" uid="uid://qfg7505cfold" path="res://NPCs/Enemies/Police/NoWeapons/no_weapons_police.tscn" id="7_uwkdj"]
 [ext_resource type="PackedScene" uid="uid://baosrgoecqsem" path="res://Admin/level_manager.tscn" id="8_85gmu"]
+[ext_resource type="PackedScene" uid="uid://dw547a0evqmd1" path="res://NPCs/Enemies/Police/Pistol/pistol_police.tscn" id="9_dwlim"]
 [ext_resource type="PackedScene" uid="uid://c1mxw0hojf0bt" path="res://Admin/level_points_tracker.tscn" id="9_mc8fh"]
 
 [node name="MapTest" type="Node2D"]
@@ -20,11 +20,8 @@ tile_set = ExtResource("2_w3eiy")
 [node name="PlayerCharacter" parent="." instance=ExtResource("3_s6p4s")]
 z_index = 1
 position = Vector2(647, 127)
-speed = 100
-sprint_modifier = 100
 
 [node name="ProjectileManager" parent="." instance=ExtResource("4_xpgvd")]
-projectile_paths = Array[String](["res://Projectiles/Damage/Bullet/damage_bullet.tscn"])
 
 [node name="FishPopulator" type="Node" parent="."]
 script = ExtResource("5_7uwje")
@@ -33,17 +30,12 @@ metadata/_custom_type_script = "uid://6534bsjb00qr"
 [node name="Dog" parent="." instance=ExtResource("6_telpd")]
 position = Vector2(981, -151)
 
-[node name="NoWeaponsPolice" parent="." instance=ExtResource("7_uwkdj")]
-position = Vector2(664, -124)
-
 [node name="LevelManager" parent="." instance=ExtResource("8_85gmu")]
 levels = Dictionary[String, String]({
-"LevelFive": "",
-"LevelFour": "",
-"LevelOne": "res://Test/map_test.tscn",
-"LevelSix": "",
-"LevelThree": "",
-"LevelTwo": ""
+"LevelOne": "res://Test/perfect_map.tscn"
 })
 
 [node name="LevelPointsTracker" parent="." instance=ExtResource("9_mc8fh")]
+
+[node name="PistolPolice" parent="." instance=ExtResource("9_dwlim")]
+position = Vector2(451, -132)

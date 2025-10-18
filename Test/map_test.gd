@@ -8,3 +8,7 @@ func set_enemies_to_idle():
 					grandchild.set_process(false)
 					grandchild.set_physics_process(false)
 			child.state_machine.state = "Idle"
+
+
+func _on_audio_stream_player_finished() -> void:
+	$AudioStreamPlayer.play()

@@ -27,7 +27,7 @@ func add_points(point_type: String, amount: int = 1):
 		"Gold Fish":
 			points += 4 * amount
 	update_points(points)
-	get_tree().get_first_node_in_group("LevelPointsTracker").update_points(points)
+	get_tree().get_first_node_in_group("LevelPointsTracker").update_level_points(points)
 
 func subtract_points(point_type: String, amount: int = 1):
 	match point_type:
